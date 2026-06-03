@@ -823,3 +823,15 @@ a { text-decoration: none; color: inherit; }
   .why-img-secondary { display: none; }
   .values-grid { grid-template-columns: 1fr; }
 }
+
+/* Strip items on light backgrounds */
+section:not(.services-strip) .strip-item strong { color: var(--navy) !important; }
+section:not(.services-strip) .strip-item p { color: var(--text-mid) !important; }
+section:not(.services-strip) .strip-item {
+  background: #fff !important;
+  border: 1.5px solid rgba(0,0,0,0.08) !important;
+}
+section:not(.services-strip) .strip-item:hover {
+  border-color: var(--orange) !important;
+  background: #fff !important;
+}

@@ -428,6 +428,8 @@ a { text-decoration: none; color: inherit; }
 }
 .strip-item:hover .strip-icon { transform: scale(1.2) rotate(-5deg); }
 .strip-item strong { display: block; font-size: 1rem; font-weight: 800; color: #fff; margin-bottom: 6px; }
+.light-bg .strip-item strong { color: var(--navy); }
+.light-bg .strip-item p { color: var(--text-mid); }
 .strip-item p { font-size: 0.82rem; color: rgba(255,255,255,0.65); line-height: 1.5; }
 
 /* ===== FEATURED RENTALS ===== */

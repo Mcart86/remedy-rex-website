@@ -387,13 +387,24 @@ a { text-decoration: none; color: inherit; }
 .services-strip .section-header h2 { color: #fff; }
 .services-strip .section-header p { color: rgba(255,255,255,0.7); }
 .strip-scroll {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 16px;
-  justify-content: center;
 }
-.strip-scroll .strip-item {
-  flex: 0 1 180px;
+.strip-scroll .strip-item:nth-child(5),
+.strip-scroll .strip-item:nth-child(6),
+.strip-scroll .strip-item:nth-child(7) {
+  grid-column: auto;
+}
+/* Center the bottom 3 — shift them into middle columns */
+.strip-bottom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 16px;
+  max-width: 75%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .strip-item {
   background: rgba(255,255,255,0.07);

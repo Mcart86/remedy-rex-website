@@ -361,7 +361,31 @@ a { text-decoration: none; color: inherit; }
 .stat-label { font-size: 0.9rem; color: var(--text-mid); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
 
 /* ===== SERVICES STRIP ===== */
-.services-strip { background: var(--cream); padding: 60px 0; }
+.services-strip {
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0f1f3d 0%, #1a3358 40%, #0d2a4a 100%);
+}
+.services-strip::before {
+  content: "";
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 60% 80% at 10% 50%, rgba(255,107,43,0.18) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 70% at 90% 30%, rgba(0,173,239,0.2) 0%, transparent 55%),
+    radial-gradient(ellipse 40% 60% at 50% 100%, rgba(255,214,0,0.12) 0%, transparent 50%);
+}
+.services-strip::after {
+  content: "";
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+.services-strip .container { position: relative; z-index: 1; }
+.services-strip .section-header h2 { color: #fff; }
+.services-strip .section-header p { color: rgba(255,255,255,0.7); }
 .strip-scroll {
   display: flex;
   flex-wrap: wrap;
@@ -372,21 +396,28 @@ a { text-decoration: none; color: inherit; }
   flex: 0 1 180px;
 }
 .strip-item {
-  background: #fff; border-radius: var(--radius);
+  background: rgba(255,255,255,0.07);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: var(--radius);
   padding: 28px 20px; text-align: center;
-  box-shadow: var(--shadow-sm);
-  border: 2px solid transparent;
-  transition: transform var(--t), border-color var(--t), box-shadow var(--t);
+  border: 1.5px solid rgba(255,255,255,0.12);
+  transition: transform var(--t), border-color var(--t), box-shadow var(--t), background var(--t);
   cursor: default;
 }
-.strip-item:hover { transform: translateY(-6px); border-color: var(--orange); box-shadow: var(--shadow); }
+.strip-item:hover {
+  transform: translateY(-8px);
+  border-color: var(--orange);
+  background: rgba(255,255,255,0.13);
+  box-shadow: 0 12px 32px rgba(255,107,43,0.25);
+}
 .strip-icon {
   font-size: 2.4rem; margin-bottom: 12px; display: block;
   transition: transform var(--t-bounce);
 }
 .strip-item:hover .strip-icon { transform: scale(1.2) rotate(-5deg); }
-.strip-item strong { display: block; font-size: 1rem; font-weight: 800; color: var(--navy); margin-bottom: 6px; }
-.strip-item p { font-size: 0.82rem; color: var(--text-mid); line-height: 1.5; }
+.strip-item strong { display: block; font-size: 1rem; font-weight: 800; color: #fff; margin-bottom: 6px; }
+.strip-item p { font-size: 0.82rem; color: rgba(255,255,255,0.65); line-height: 1.5; }
 
 /* ===== FEATURED RENTALS ===== */
 .featured { background: var(--off-white); }

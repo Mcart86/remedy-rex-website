@@ -293,6 +293,7 @@ a { text-decoration: none; color: inherit; }
   animation: floatCard 5s ease-in-out infinite;
   border: 1px solid rgba(255,255,255,0.8);
   white-space: nowrap;
+  z-index: 10;
 }
 .hero-float-card .card-icon { font-size: 1.8rem; }
 .hero-float-card strong { display: block; font-size: 0.95rem; color: var(--navy); font-weight: 800; }
@@ -361,7 +362,15 @@ a { text-decoration: none; color: inherit; }
 
 /* ===== SERVICES STRIP ===== */
 .services-strip { background: var(--cream); padding: 60px 0; }
-.strip-scroll { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; }
+.strip-scroll {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+.strip-scroll .strip-item {
+  flex: 0 1 180px;
+}
 .strip-item {
   background: #fff; border-radius: var(--radius);
   padding: 28px 20px; text-align: center;

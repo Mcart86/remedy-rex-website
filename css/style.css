@@ -361,7 +361,7 @@ a { text-decoration: none; color: inherit; }
 
 /* ===== SERVICES STRIP ===== */
 .services-strip { background: var(--cream); padding: 60px 0; }
-.strip-scroll { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
+.strip-scroll { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; }
 .strip-item {
   background: #fff; border-radius: var(--radius);
   padding: 28px 20px; text-align: center;

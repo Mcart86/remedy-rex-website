@@ -202,9 +202,9 @@ a { text-decoration: none; color: inherit; }
 }
 .hero-inner {
   position: relative; z-index: 3;
-  width: 100%; max-width: 1300px; margin: 0 auto;
-  padding: 140px 48px 80px 48px;
-  display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
+  width: 100%; max-width: 1400px; margin: 0 auto;
+  padding: 140px 80px 80px 80px;
+  display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 100px; align-items: center;
   min-height: 100vh;
 }
 .hero-content {
@@ -222,10 +222,11 @@ a { text-decoration: none; color: inherit; }
 .hero-eyebrow::before { content: '🎉'; font-size: 1rem; }
 
 .hero-title {
-  font-size: clamp(2.8rem, 5.5vw, 4.8rem);
-  color: #ffffff; line-height: 1.05;
-  margin-bottom: 20px;
+  font-size: clamp(2.8rem, 5vw, 5.2rem);
+  color: #ffffff; line-height: 1.1;
+  margin-bottom: 24px;
   text-shadow: 0 2px 24px rgba(0,0,0,0.6);
+  white-space: nowrap;
   animation: fadeSlideUp 0.8s 0.15s ease both;
 }
 .hero-title .line-1 { display: block; }
@@ -234,6 +235,12 @@ a { text-decoration: none; color: inherit; }
   background: linear-gradient(120deg, #FFD600 0%, #FF851B 45%, #FF3FA4 100%);
   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
   position: relative;
+  filter: drop-shadow(0 0 12px rgba(255,133,27,0.45));
+}
+.hero-title .line-2-inline {
+  display: inline;
+  background: linear-gradient(120deg, #FFD600 0%, #FF851B 45%, #FF3FA4 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
   filter: drop-shadow(0 0 12px rgba(255,133,27,0.45));
 }
 .hero-title .line-3 { display: block; color: rgba(255,255,255,0.85); }

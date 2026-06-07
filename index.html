@@ -98,15 +98,34 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero-bg"></div>
-    <div class="hero-grid-overlay"></div>
-    <div class="hero-particles"></div>
-    <div class="hero-emoji-float" style="top:15%;right:5%;">🎈</div>
-    <div class="hero-emoji-float" style="top:60%;right:8%;animation-delay:-2s;">⭐</div>
-    <div class="hero-emoji-float" style="top:80%;left:3%;animation-delay:-4s;">🎉</div>
-    <div class="hero-emoji-float" style="top:25%;left:2%;animation-delay:-6s;">✨</div>
+
+    <!-- CLOUDS -->
+    <div class="cloud cloud-1"></div>
+    <div class="cloud cloud-2"></div>
+    <div class="cloud cloud-3"></div>
+    <div class="cloud cloud-4"></div>
+
+    <!-- CONFETTI -->
+    <div class="confetti-container" id="confetti-container"></div>
+
+    <!-- BALLOONS -->
+    <div class="balloon balloon-red"   style="left:6%;"><div class="balloon-string"></div></div>
+    <div class="balloon balloon-yellow" style="left:14%;animation-delay:-2s;"><div class="balloon-string"></div></div>
+    <div class="balloon balloon-blue"  style="right:8%;animation-delay:-4s;"><div class="balloon-string"></div></div>
+    <div class="balloon balloon-green" style="right:18%;animation-delay:-1s;"><div class="balloon-string"></div></div>
+    <div class="balloon balloon-orange" style="right:30%;animation-delay:-3s;"><div class="balloon-string"></div></div>
+
+    <!-- CARTOON STARS -->
+    <div class="star-burst star-1">★</div>
+    <div class="star-burst star-2">✦</div>
+    <div class="star-burst star-3">★</div>
+    <div class="star-burst star-4">✦</div>
+    <div class="star-burst star-5">★</div>
+    <div class="star-burst star-6">✦</div>
+
     <div class="hero-inner">
       <div class="hero-content">
-        <div class="hero-eyebrow">Serving Gloucester Township, NJ &amp; Surrounding Areas</div>
+        <div class="hero-eyebrow">🎉 Serving Gloucester Township, NJ &amp; Surrounding Areas</div>
         <h1 class="hero-title">
           <span class="line-1">The Party Starts <span class="line-2-inline">Here!</span></span>
         </h1>
@@ -124,21 +143,35 @@
       </div>
       <div class="hero-visual">
         <div class="hero-float-card fc-1"><span class="card-icon">🏆</span><div><strong>Family Owned</strong><span>Est. in NJ</span></div></div>
-        <div class="hero-img-main">
-          <img src="images/hero-main.jpg" alt="Kids having fun on inflatables"/>
-        </div>
         <div class="hero-float-card fc-2"><span class="card-icon">✅</span><div><strong>Fully Insured</strong><span>Safety first</span></div></div>
         <div class="hero-float-card fc-3"><span class="card-icon">🚚</span><div><strong>Full Setup</strong><span>We handle it all</span></div></div>
-        <div class="hero-img-mini">
-          <img src="https://static.wixstatic.com/media/8d967a_361aec2d237940548781e69b5a8c9371~mv2.jpg/v1/fill/w_300,h_300,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/12_edited.jpg" alt="Water slide fun"/>
-        </div>
       </div>
     </div>
+
     <div class="hero-wave">
-      <svg viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-        <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#ffffff"/>
+      <svg viewBox="0 0 1440 100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0,60 C240,100 480,20 720,60 C960,100 1200,20 1440,60 L1440,100 L0,100 Z" fill="#ffffff"/>
       </svg>
     </div>
+
+    <script>
+    (function(){
+      var colors = ['#FF4500','#FF8C00','#FFD700','#2ECC40','#1E90FF','#ffffff'];
+      var shapes = ['square','circle','triangle'];
+      var container = document.getElementById('confetti-container');
+      for(var i=0;i<60;i++){
+        var el = document.createElement('div');
+        var shape = shapes[Math.floor(Math.random()*shapes.length)];
+        el.className = 'confetti-piece ' + shape;
+        el.style.left = Math.random()*100 + '%';
+        el.style.animationDelay = (Math.random()*8) + 's';
+        el.style.animationDuration = (4+Math.random()*6) + 's';
+        el.style.background = colors[Math.floor(Math.random()*colors.length)];
+        el.style.width = el.style.height = (6+Math.random()*8) + 'px';
+        container.appendChild(el);
+      }
+    })();
+    </script>
   </section>
 
 

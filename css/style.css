@@ -180,7 +180,7 @@ a { text-decoration: none; color: inherit; }
 .hero-bg {
   position: absolute; inset: 0; z-index: 0;
   background-image: 
-    linear-gradient(to right, rgba(5,15,40,0.88) 0%, rgba(5,15,40,0.6) 40%, rgba(5,15,40,0.25) 100%),
+    linear-gradient(rgba(5,15,40,0.65) 0%, rgba(5,15,40,0.65) 100%),
     url("../images/hero-main.jpg");
   background-size: cover;
   background-position: center 30%;
@@ -202,19 +202,22 @@ a { text-decoration: none; color: inherit; }
 }
 .hero-inner {
   position: relative; z-index: 3;
-  width: 100%; max-width: 1400px; margin: 0 auto;
-  padding: 0 80px;
-  display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 100px; align-items: center;
+  width: 100%; max-width: 1100px; margin: 0 auto;
+  padding: 0 48px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
   min-height: 100vh;
+  text-align: center;
 }
 .hero-content {
-  max-width: 640px;
+  max-width: 780px;
+  width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
 .hero-eyebrow {
-  display: inline-flex; align-items: center; gap: 10px;
+  display: inline-flex; align-items: center; gap: 10px; margin-left: auto; margin-right: auto;
   background: rgba(255,133,27,0.12); border: 1px solid rgba(255,133,27,0.4);
   color: var(--orange); font-weight: 800; font-size: 0.82rem;
   text-transform: uppercase; letter-spacing: 2px;
@@ -249,17 +252,18 @@ a { text-decoration: none; color: inherit; }
 .hero-title .line-3 { display: block; color: rgba(255,255,255,0.85); }
 
 .hero-sub {
-  font-size: 1.1rem; color: rgba(255,255,255,0.75);
-  line-height: 1.7; margin-bottom: 28px; max-width: 520px;
+  font-size: 1.15rem; color: rgba(255,255,255,0.8);
+  line-height: 1.7; margin-bottom: 28px; max-width: 600px;
+  text-align: center;
   animation: fadeSlideUp 0.8s 0.3s ease both;
 }
 .hero-btns {
-  display: flex; gap: 16px; flex-wrap: wrap;
+  display: flex; gap: 16px; flex-wrap: wrap; justify-content: center;
   animation: fadeSlideUp 0.8s 0.45s ease both;
 }
 .hero-trust {
   display: flex; align-items: center; gap: 16px;
-  margin-top: 24px;
+  margin-top: 24px; justify-content: center;
   animation: fadeSlideUp 0.8s 0.6s ease both;
 }
 .hero-trust-avatars { display: flex; }
@@ -277,9 +281,9 @@ a { text-decoration: none; color: inherit; }
 
 /* Hero visual */
 .hero-visual {
-  position: relative;
-  display: flex; flex-direction: column; gap: 16px; align-items: flex-end;
-  animation: fadeSlideUp 0.8s 0.2s ease both;
+  display: flex; flex-direction: row; gap: 20px; justify-content: center; flex-wrap: wrap;
+  margin-top: 40px;
+  animation: fadeSlideUp 0.8s 0.7s ease both;
 }
 .hero-visual::before { display: none; }
 .hero-img-main {
@@ -312,9 +316,9 @@ a { text-decoration: none; color: inherit; }
 .hero-float-card .card-icon { font-size: 1.8rem; }
 .hero-float-card strong { display: block; font-size: 0.95rem; color: var(--navy); font-weight: 800; }
 .hero-float-card span { font-size: 0.78rem; color: var(--text-mid); }
-.fc-1 { position: relative; top: auto; left: auto; right: auto; bottom: auto; align-self: flex-end; animation-delay: 0s; }
-.fc-2 { position: relative; top: auto; left: auto; right: auto; bottom: auto; align-self: flex-start; animation-delay: -2s; }
-.fc-3 { position: relative; top: auto; left: auto; right: auto; bottom: auto; align-self: flex-end; animation-delay: -4s; }
+.fc-1 { position: relative; top: auto; left: auto; right: auto; bottom: auto; animation-delay: 0s; }
+.fc-2 { position: relative; top: auto; left: auto; right: auto; bottom: auto; animation-delay: -2s; }
+.fc-3 { position: relative; top: auto; left: auto; right: auto; bottom: auto; animation-delay: -4s; }
 
 .hero-img-mini {
   display: none;
@@ -632,7 +636,7 @@ a { text-decoration: none; color: inherit; }
 .social-inner > p { color: var(--text-mid); font-size: 1.1rem; margin-bottom: 40px; line-height: 1.8; }
 .social-links { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 28px; }
 .social-btn {
-  display: inline-flex; align-items: center; gap: 10px;
+  display: inline-flex; align-items: center; gap: 10px; margin-left: auto; margin-right: auto;
   padding: 15px 30px; border-radius: 50px;
   font-weight: 800; font-size: 1rem; color: #111111;
   transition: transform var(--t-bounce), box-shadow var(--t);

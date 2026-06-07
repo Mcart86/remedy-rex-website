@@ -203,19 +203,22 @@ a { text-decoration: none; color: inherit; }
 .hero-inner {
   position: relative; z-index: 3;
   width: 100%; max-width: 1400px; margin: 0 auto;
-  padding: 140px 80px 80px 80px;
+  padding: 0 80px;
   display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 100px; align-items: center;
   min-height: 100vh;
 }
 .hero-content {
-  max-width: 600px;
+  max-width: 640px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .hero-eyebrow {
   display: inline-flex; align-items: center; gap: 10px;
   background: rgba(255,133,27,0.12); border: 1px solid rgba(255,133,27,0.4);
   color: var(--orange); font-weight: 800; font-size: 0.82rem;
   text-transform: uppercase; letter-spacing: 2px;
-  padding: 8px 20px; border-radius: 50px; margin-bottom: 24px;
+  padding: 8px 20px; border-radius: 50px; margin-bottom: 18px;
   backdrop-filter: blur(8px);
   animation: fadeSlideUp 0.8s ease forwards;
 }
@@ -224,7 +227,7 @@ a { text-decoration: none; color: inherit; }
 .hero-title {
   font-size: clamp(2.8rem, 5vw, 5.2rem);
   color: #ffffff; line-height: 1.1;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
   text-shadow: 0 2px 24px rgba(0,0,0,0.6);
   white-space: nowrap;
   animation: fadeSlideUp 0.8s 0.15s ease both;
@@ -246,8 +249,8 @@ a { text-decoration: none; color: inherit; }
 .hero-title .line-3 { display: block; color: rgba(255,255,255,0.85); }
 
 .hero-sub {
-  font-size: 1.2rem; color: rgba(255,255,255,0.72);
-  line-height: 1.8; margin-bottom: 40px; max-width: 480px;
+  font-size: 1.1rem; color: rgba(255,255,255,0.75);
+  line-height: 1.7; margin-bottom: 28px; max-width: 520px;
   animation: fadeSlideUp 0.8s 0.3s ease both;
 }
 .hero-btns {
@@ -256,7 +259,7 @@ a { text-decoration: none; color: inherit; }
 }
 .hero-trust {
   display: flex; align-items: center; gap: 16px;
-  margin-top: 40px;
+  margin-top: 24px;
   animation: fadeSlideUp 0.8s 0.6s ease both;
 }
 .hero-trust-avatars { display: flex; }

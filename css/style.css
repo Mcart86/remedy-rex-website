@@ -231,7 +231,7 @@ a { text-decoration: none; color: inherit; }
   font-size: clamp(3.1rem, 5.5vw, 5.8rem);
   color: #ffffff; line-height: 1.1;
   margin-bottom: 18px;
-  text-shadow: 0 2px 24px rgba(0,0,0,0.6);
+  text-shadow: none;
   white-space: nowrap;
   animation: fadeSlideUp 0.8s 0.15s ease both;
 }

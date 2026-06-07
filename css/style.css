@@ -180,10 +180,10 @@ a { text-decoration: none; color: inherit; }
 .hero-bg {
   position: absolute; inset: 0; z-index: 0;
   background-image: 
-    linear-gradient(rgba(5,15,40,0.65) 0%, rgba(5,15,40,0.65) 100%),
+    linear-gradient(rgba(5,15,40,0.55) 0%, rgba(5,15,40,0.55) 100%),
     url("../images/hero-main.jpg");
   background-size: cover;
-  background-position: center 30%;
+  background-position: center 60%;
   background-repeat: no-repeat;
 }
 .hero-grid-overlay {

@@ -1022,3 +1022,88 @@ section:not(.services-strip) .strip-item:hover {
   .packages-grid { grid-template-columns: 1fr; }
   .package-card.featured { transform: none; }
 }
+
+/* ===== PLAYFUL ADDITIONS ===== */
+
+/* Wavy section dividers */
+.wave-top, .wave-bottom { line-height: 0; }
+
+/* Strip item stagger animation */
+.strip-item {
+  animation-delay: 0s;
+  animation: stripPop 0.5s cubic-bezier(0.34,1.56,0.64,1) both;
+}
+@keyframes stripPop {
+  from { opacity:0; transform:translateY(20px) scale(0.9); }
+  to   { opacity:1; transform:translateY(0) scale(1); }
+}
+
+/* Wobbly hover on ALL buttons */
+.btn:hover {
+  animation: btnWobble 0.4s cubic-bezier(0.34,1.56,0.64,1);
+}
+@keyframes btnWobble {
+  0%   { transform: translateY(-4px) rotate(0deg); }
+  25%  { transform: translateY(-6px) rotate(-2deg); }
+  50%  { transform: translateY(-4px) rotate(2deg); }
+  75%  { transform: translateY(-5px) rotate(-1deg); }
+  100% { transform: translateY(-4px) rotate(0deg); }
+}
+
+/* Colorful card top border flash on hover */
+.rental-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 4px;
+  background: linear-gradient(90deg, var(--card-color, var(--orange)), var(--pink));
+  opacity: 0; transition: opacity 0.3s ease;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+.rental-card:hover::before { opacity: 1; }
+
+/* Fun emoji bullets in Why Us list */
+.why-icon-wrap {
+  animation: iconPop 3s ease-in-out infinite;
+}
+@keyframes iconPop {
+  0%,100% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.15) rotate(-5deg); }
+}
+
+/* Pulsing CTA button */
+.btn-primary {
+  animation: ctaPulse 3s ease-in-out infinite;
+}
+@keyframes ctaPulse {
+  0%,100% { box-shadow: 0 4px 16px rgba(255,107,43,0.4); }
+  50% { box-shadow: 0 8px 32px rgba(255,107,43,0.7), 0 0 0 6px rgba(255,107,43,0.15); }
+}
+
+/* Rainbow underline on hero title */
+.hero-title .line-2::after {
+  content: '';
+  display: block;
+  height: 4px;
+  background: linear-gradient(90deg, #FF6B2B, #FFD600, #00ADEF, #FF3FA4, #00C97A);
+  border-radius: 4px;
+  margin-top: 4px;
+  animation: rainbowSlide 3s ease-in-out infinite;
+}
+@keyframes rainbowSlide {
+  0%,100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Floating emoji decoration in hero */
+.hero-emoji-float {
+  position: absolute;
+  font-size: 2rem;
+  animation: emojiDrift 8s ease-in-out infinite;
+  pointer-events: none;
+  opacity: 0.4;
+  z-index: 2;
+}
+@keyframes emojiDrift {
+  0%,100% { transform: translateY(0) rotate(0deg); }
+  33% { transform: translateY(-20px) rotate(10deg); }
+  66% { transform: translateY(-10px) rotate(-5deg); }
+}

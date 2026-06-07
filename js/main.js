@@ -159,3 +159,107 @@ document.querySelectorAll('.rental-card').forEach(card => {
     card.style.transform = '';
   });
 });
+
+// ===== SCROLL PROGRESS BAR =====
+const progressBar = document.getElementById('progress-bar');
+window.addEventListener('scroll', () => {
+  if (!progressBar) return;
+  const pct = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+  progressBar.style.width = pct + '%';
+}, { passive: true });
+
+// ===== CUSTOM CURSOR =====
+const cursor = document.getElementById('custom-cursor');
+const cursors = ['🎈','⭐','🎉','🎊','✨','🏀','💥'];
+let cursorIdx = 0;
+document.addEventListener('mousemove', e => {
+  if (!cursor) return;
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top = e.clientY + 'px';
+});
+document.addEventListener('mousedown', () => cursor?.classList.add('clicking'));
+document.addEventListener('mouseup', () => cursor?.classList.remove('clicking'));
+// Cycle cursor emoji on click
+document.addEventListener('click', () => {
+  if (!cursor) return;
+  cursorIdx = (cursorIdx + 1) % cursors.length;
+  cursor.textContent = cursors[cursorIdx];
+});
+
+// ===== CONFETTI BURST ON LOAD =====
+function launchConfetti() {
+  const canvas = document.getElementById('confetti-canvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  const pieces = [];
+  const colors = ['#FF6B2B','#FFD600','#FF3FA4','#00ADEF','#00C97A','#9B59B6','#fff'];
+  const shapes = ['circle','rect','triangle'];
+  for (let i = 0; i < 120; i++) {
+    pieces.push({
+      x: Math.random() * canvas.width,
+      y: -20 - Math.random() * 200,
+      r: Math.random() * 8 + 3,
+      color: colors[Math.floor(Math.random() * colors.length)],
+      shape: shapes[Math.floor(Math.random() * shapes.length)],
+      vx: (Math.random() - 0.5) * 4,
+      vy: Math.random() * 3 + 2,
+      spin: Math.random() * 0.2 - 0.1,
+      angle: Math.random() * Math.PI * 2,
+      opacity: 1
+    });
+  }
+  let frame = 0;
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    pieces.forEach(p => {
+      p.x += p.vx; p.y += p.vy; p.angle += p.spin;
+      p.vy += 0.05; p.opacity -= 0.005;
+      ctx.save(); ctx.globalAlpha = Math.max(0, p.opacity);
+      ctx.translate(p.x, p.y); ctx.rotate(p.angle);
+      ctx.fillStyle = p.color;
+      if (p.shape === 'circle') { ctx.beginPath(); ctx.arc(0,0,p.r,0,Math.PI*2); ctx.fill(); }
+      else if (p.shape === 'rect') { ctx.fillRect(-p.r,-p.r/2,p.r*2,p.r); }
+      else { ctx.beginPath(); ctx.moveTo(0,-p.r); ctx.lineTo(p.r,p.r); ctx.lineTo(-p.r,p.r); ctx.closePath(); ctx.fill(); }
+      ctx.restore();
+    });
+    frame++;
+    if (frame < 200) requestAnimationFrame(draw);
+    else ctx.clearRect(0, 0, canvas.width, canvas.height);
+  }
+  draw();
+}
+window.addEventListener('load', () => setTimeout(launchConfetti, 500));
+
+// ===== BOING SOUND ON BOOK NOW =====
+function createBoingSound() {
+  try {
+    const ctx = new (window.AudioContext || window.webkitAudioContext)();
+    const o = ctx.createOscillator();
+    const g = ctx.createGain();
+    o.connect(g); g.connect(ctx.destination);
+    o.type = 'sine';
+    o.frequency.setValueAtTime(300, ctx.currentTime);
+    o.frequency.exponentialRampToValueAtTime(600, ctx.currentTime + 0.1);
+    o.frequency.exponentialRampToValueAtTime(200, ctx.currentTime + 0.3);
+    g.gain.setValueAtTime(0.3, ctx.currentTime);
+    g.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.4);
+    o.start(ctx.currentTime);
+    o.stop(ctx.currentTime + 0.4);
+  } catch(e) {}
+}
+document.querySelectorAll('.btn-card, .btn-primary, .nav-cta').forEach(btn => {
+  btn.addEventListener('click', createBoingSound);
+});
+
+// ===== PARTY HORN POP on first visit =====
+if (!sessionStorage.getItem('partied')) {
+  sessionStorage.setItem('partied','1');
+  // confetti already fires on load above
+}
+
+// ===== WAVY STRIP ITEMS - random wobble delays =====
+document.querySelectorAll('.strip-item').forEach((el, i) => {
+  el.style.animationDelay = (i * 0.15) + 's';
+});

@@ -9,6 +9,63 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="css/style.css"/>
+  <style>
+    /* SCROLL PROGRESS BAR */
+    #progress-bar {
+      position: fixed; top: 0; left: 0; height: 4px; width: 0%;
+      background: linear-gradient(90deg, #FF6B2B, #FFD600, #FF3FA4, #00ADEF, #00C97A);
+      z-index: 9999; transition: width 0.1s linear;
+      box-shadow: 0 0 10px rgba(255,107,43,0.6);
+    }
+    /* CONFETTI */
+    #confetti-canvas {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      pointer-events: none; z-index: 9998;
+    }
+    /* CUSTOM CURSOR */
+    * { cursor: none !important; }
+    #custom-cursor {
+      position: fixed; pointer-events: none; z-index: 99999;
+      font-size: 1.4rem; transform: translate(-50%, -50%);
+      transition: transform 0.1s ease;
+    }
+    #custom-cursor.clicking { transform: translate(-50%,-50%) scale(0.7); }
+    /* WAVY DIVIDERS */
+    .wave-divider { line-height: 0; overflow: hidden; }
+    .wave-divider svg { display: block; }
+    /* WOBBLY CARDS */
+    .rental-card { transform-style: preserve-3d; will-change: transform; }
+    /* COLORFUL BORDERS BY CATEGORY */
+    .cards-grid .rental-card:nth-child(1) { --card-color: #FF6B2B; }
+    .cards-grid .rental-card:nth-child(2) { --card-color: #FF3FA4; }
+    .cards-grid .rental-card:nth-child(3) { --card-color: #00ADEF; }
+    .cards-grid .rental-card:nth-child(4) { --card-color: #FFD600; }
+    .cards-grid .rental-card:nth-child(5) { --card-color: #00C97A; }
+    .cards-grid .rental-card:nth-child(6) { --card-color: #9B59B6; }
+    .rental-card:hover { border-color: var(--card-color) !important; box-shadow: 0 20px 60px color-mix(in srgb, var(--card-color) 30%, transparent) !important; }
+    /* BOUNCY BADGES */
+    .section-tag, .card-badge, .new-arrival-badge {
+      animation: badgeBounce 2s ease-in-out infinite;
+    }
+    @keyframes badgeBounce {
+      0%,100% { transform: translateY(0) rotate(0deg); }
+      25% { transform: translateY(-3px) rotate(-1deg); }
+      75% { transform: translateY(-2px) rotate(1deg); }
+    }
+    /* DIAGONAL RIBBON */
+    .ribbon-wrap { position: absolute; top: 0; right: 0; width: 80px; height: 80px; overflow: hidden; z-index: 2; }
+    .ribbon {
+      position: absolute; top: 18px; right: -22px;
+      background: #FF3FA4; color: #fff;
+      font-size: 0.65rem; font-weight: 900; text-transform: uppercase;
+      padding: 4px 28px; transform: rotate(45deg);
+      letter-spacing: 1px; box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    /* FUN MICROCOPY */
+    .fun-sub { font-size: 0.85rem; color: var(--text-mid); font-style: italic; margin-top: -10px; margin-bottom: 20px; }
+    /* SCROLL PROGRESS */
+  </style>
+
 </head>
 <body>
 
@@ -43,6 +100,10 @@
     <div class="hero-bg"></div>
     <div class="hero-grid-overlay"></div>
     <div class="hero-particles"></div>
+    <div class="hero-emoji-float" style="top:15%;right:5%;">🎈</div>
+    <div class="hero-emoji-float" style="top:60%;right:8%;animation-delay:-2s;">⭐</div>
+    <div class="hero-emoji-float" style="top:80%;left:3%;animation-delay:-4s;">🎉</div>
+    <div class="hero-emoji-float" style="top:25%;left:2%;animation-delay:-6s;">✨</div>
     <div class="hero-inner">
       <div class="hero-content">
         <div class="hero-eyebrow">Serving Gloucester Township, NJ &amp; Surrounding Areas</div>
@@ -82,6 +143,10 @@
     </div>
   </section>
 
+
+  <div id="progress-bar"></div>
+  <canvas id="confetti-canvas"></canvas>
+  <div id="custom-cursor">🎈</div>
 
   <!-- TICKER BANNER -->
   <div class="new-arrivals-banner">
@@ -132,6 +197,7 @@
         <div class="section-tag">Everything You Need</div>
         <h2>One Call Does It All</h2>
         <p>From inflatable fun to full event setup — we've got every piece of your perfect party.</p>
+        <p class="fun-sub">🎪 We're basically professional fun-makers.</p>
       </div>
       <div class="strip-scroll">
         <div class="strip-item"><span class="strip-icon">🏠</span><strong>Bounce Houses</strong><p>Safe &amp; clean for all ages</p></div>
@@ -205,7 +271,7 @@
       <div class="cards-grid">
         <div class="rental-card">
           <div class="card-img-wrap">
-            <img src="images/jungle-bounce-house-v2.jpg" alt="Jungle Bounce House"/>
+            <img src="images/jungle-bounce-house-v2.jpg" alt="Jungle Bounce House"/><div class="ribbon-wrap"><div class="ribbon">🏆 #1</div></div>
             <span class="card-badge">🌿 Fan Favorite</span>
           </div>
           <div class="card-body">
@@ -347,6 +413,33 @@
     </div>
   </section>
 
+
+
+  <!-- FUN FACTS TICKER -->
+  <div style="background:linear-gradient(135deg,#FF6B2B,#FF3FA4);padding:12px 0;overflow:hidden;position:relative;">
+    <div style="display:flex;animation:ticker 25s linear infinite;white-space:nowrap;">
+      <span style="color:#fff;font-weight:900;font-size:0.88rem;letter-spacing:1px;padding:0 32px;">🎉 100+ HAPPY FAMILIES SERVED</span>
+      <span style="color:rgba(255,255,255,0.5);padding:0 8px;">★</span>
+      <span style="color:#fff;font-weight:900;font-size:0.88rem;letter-spacing:1px;padding:0 32px;">🏆 5-STAR RATED SERVICE</span>
+      <span style="color:rgba(255,255,255,0.5);padding:0 8px;">★</span>
+      <span style="color:#fff;font-weight:900;font-size:0.88rem;letter-spacing:1px;padding:0 32px;">🚚 FREE DELIVERY & SETUP</span>
+      <span style="color:rgba(255,255,255,0.5);padding:0 8px;">★</span>
+      <span style="color:#fff;font-weight:900;font-size:0.88rem;letter-spacing:1px;padding:0 32px;">💦 ALL SLIDES WATER CAPABLE</span>
+      <span style="color:rgba(255,255,255,0.5);padding:0 8px;">★</span>
+      <span style="color:#fff;font-weight:900;font-size:0.88rem;letter-spacing:1px;padding:0 32px;">🎈 0 BORING PARTIES SINCE DAY ONE</span>
+      <span style="color:rgba(255,255,255,0.5);padding:0 8px;">★</span>
+      <span style="color:#fff;font-weight:900;font-size:0.88rem;letter-spacing:1px;padding:0 32px;">🎉 100+ HAPPY FAMILIES SERVED</span>
+      <span style="color:rgba(255,255,255,0.5);padding:0 8px;">★</span>
+      <span style="color:#fff;font-weight:900;font-size:0.88rem;letter-spacing:1px;padding:0 32px;">🏆 5-STAR RATED SERVICE</span>
+      <span style="color:rgba(255,255,255,0.5);padding:0 8px;">★</span>
+      <span style="color:#fff;font-weight:900;font-size:0.88rem;letter-spacing:1px;padding:0 32px;">🚚 FREE DELIVERY & SETUP</span>
+      <span style="color:rgba(255,255,255,0.5);padding:0 8px;">★</span>
+      <span style="color:#fff;font-weight:900;font-size:0.88rem;letter-spacing:1px;padding:0 32px;">💦 ALL SLIDES WATER CAPABLE</span>
+      <span style="color:rgba(255,255,255,0.5);padding:0 8px;">★</span>
+      <span style="color:#fff;font-weight:900;font-size:0.88rem;letter-spacing:1px;padding:0 32px;">🎈 0 BORING PARTIES SINCE DAY ONE</span>
+      <span style="color:rgba(255,255,255,0.5);padding:0 8px;">★</span>
+    </div>
+  </div>
 
   <!-- EVENT DECOR -->
   <section class="event-decor">

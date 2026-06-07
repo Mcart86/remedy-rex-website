@@ -1388,3 +1388,185 @@ section:not(.services-strip) .strip-item:hover {
   .svc-grid { grid-template-columns: 1fr; }
   .svc-trust-divider { display: none; }
 }
+
+/* ===== HOT NEW ARRIVALS — PREMIUM REDESIGN ===== */
+.hna-section {
+  position: relative;
+  padding: 110px 0 100px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #FF4500 0%, #FF8C00 40%, #FFD700 100%);
+}
+
+/* Floating bg elements */
+.hna-bg-elements { position: absolute; inset: 0; pointer-events: none; z-index: 0; }
+.hna-bal {
+  position: absolute; bottom: 10%;
+  font-size: 3.5rem; opacity: 0.15;
+  animation: hnaBalloonFloat 8s ease-in-out infinite;
+}
+@keyframes hnaBalloonFloat {
+  0%,100% { transform: translateY(0) rotate(-6deg); }
+  50%     { transform: translateY(-50px) rotate(6deg); }
+}
+
+/* Confetti pieces */
+.hna-confetti {
+  position: absolute;
+  border-radius: 3px;
+  opacity: 0.35;
+  animation: hnaConfettiBob ease-in-out infinite;
+}
+.hna-c1 { width:12px;height:12px;background:#ffffff;  top:10%;left:8%;  animation-duration:3s; animation-delay:0s;   border-radius:50%; }
+.hna-c2 { width:10px;height:10px;background:#1E90FF;  top:20%;left:90%; animation-duration:4s; animation-delay:-1s; }
+.hna-c3 { width:14px;height:14px;background:#2ECC40;  top:60%;left:5%;  animation-duration:5s; animation-delay:-2s; border-radius:50%; }
+.hna-c4 { width:8px; height:8px; background:#ffffff;  top:75%;left:92%; animation-duration:3.5s;animation-delay:-0.5s; }
+.hna-c5 { width:16px;height:16px;background:#1E90FF;  top:30%;left:50%; animation-duration:6s; animation-delay:-3s; border-radius:50%; }
+.hna-c6 { width:10px;height:10px;background:#2ECC40;  top:85%;left:30%; animation-duration:4.5s;animation-delay:-1.5s; }
+.hna-c7 { width:12px;height:12px;background:#ffffff;  top:45%;left:75%; animation-duration:3.8s;animation-delay:-2.5s; border-radius:50%; }
+.hna-c8 { width:8px; height:8px; background:#1E90FF;  top:15%;left:25%; animation-duration:5.5s;animation-delay:-0.8s; }
+@keyframes hnaConfettiBob {
+  0%,100% { transform: translateY(0) rotate(0deg); }
+  50%     { transform: translateY(-20px) rotate(180deg); }
+}
+
+/* Header */
+.hna-header { text-align: center; margin-bottom: 56px; }
+.hna-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: rgba(255,255,255,0.25);
+  border: 2px solid rgba(255,255,255,0.6);
+  color: #ffffff;
+  font-family: 'Fredoka One', cursive;
+  font-size: 0.85rem; letter-spacing: 2px;
+  padding: 6px 20px; border-radius: 50px;
+  margin-bottom: 16px;
+  backdrop-filter: blur(8px);
+}
+.hna-title {
+  font-family: 'Fredoka One', cursive;
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  color: #ffffff;
+  line-height: 1.05;
+  margin-bottom: 14px;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+.hna-sub {
+  font-size: 1.15rem;
+  color: rgba(255,255,255,0.9);
+  max-width: 540px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* CARD GRID */
+.hna-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 28px;
+  margin-bottom: 48px;
+}
+.hna-card {
+  background: #ffffff;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.18);
+  transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1),
+              box-shadow 0.4s ease;
+  display: flex; flex-direction: column;
+}
+.hna-card:hover {
+  transform: translateY(-16px) scale(1.02);
+  box-shadow: 0 28px 70px rgba(255,69,0,0.4),
+              0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* Card image */
+.hna-card-img-wrap {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+}
+.hna-card-img-wrap img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.55s ease;
+}
+.hna-card:hover .hna-card-img-wrap img { transform: scale(1.1); }
+.hna-card-img-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(20,45,95,0.55) 0%, transparent 55%);
+}
+
+/* Badge pill */
+.hna-pill {
+  position: absolute; top: 16px; left: 16px;
+  font-family: 'Fredoka One', cursive;
+  font-size: 0.82rem; padding: 5px 14px;
+  border-radius: 50px;
+  color: #ffffff;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  z-index: 2;
+}
+.hna-pill-new     { background: #2ECC40; }
+.hna-pill-hot     { background: #FF4500; }
+.hna-pill-fav     { background: #1E90FF; }
+.hna-pill-limited { background: #FF8C00; }
+
+/* Card body */
+.hna-card-body {
+  padding: 24px 26px 28px;
+  display: flex; flex-direction: column; flex: 1;
+}
+.hna-card-body h3 {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.45rem;
+  color: #142D5F;
+  margin-bottom: 10px;
+  line-height: 1.15;
+}
+.hna-card-body p {
+  font-size: 0.93rem;
+  color: #444;
+  line-height: 1.75;
+  flex: 1;
+  margin-bottom: 22px;
+}
+.hna-card-footer { margin-top: auto; }
+.hna-cta {
+  display: inline-block;
+  background: linear-gradient(135deg, #FF4500, #FF8C00);
+  color: #ffffff;
+  font-family: 'Fredoka One', cursive;
+  font-size: 1rem;
+  padding: 12px 26px;
+  border-radius: 50px;
+  box-shadow: 0 4px 18px rgba(255,140,0,0.4);
+  transition: box-shadow 0.3s ease, transform 0.3s ease, background 0.3s ease;
+}
+.hna-cta:hover {
+  background: linear-gradient(135deg, #FF8C00, #FFD700);
+  box-shadow: 0 8px 30px rgba(255,140,0,0.65);
+  transform: translateY(-2px);
+}
+
+/* View All */
+.hna-view-all { text-align: center; }
+.hna-view-btn {
+  display: inline-block;
+  background: rgba(255,255,255,0.2);
+  border: 2px solid rgba(255,255,255,0.7);
+  color: #ffffff;
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.1rem;
+  padding: 14px 40px;
+  border-radius: 50px;
+  backdrop-filter: blur(8px);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.hna-view-btn:hover {
+  background: rgba(255,255,255,0.35);
+  transform: translateY(-3px);
+}
+
+@media(max-width:900px) { .hna-grid { grid-template-columns: repeat(2,1fr); } }
+@media(max-width:580px) { .hna-grid { grid-template-columns: 1fr; } }

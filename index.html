@@ -343,49 +343,88 @@
   </section>
 
 
-  <!-- NEW ARRIVALS -->
-  <section class="new-arrivals">
-    <div class="container">
-      <div class="section-header reveal">
-        <div class="section-tag">🆕 Just Added</div>
-        <h2>Hot New Arrivals</h2>
-        <p>Hot new inventory landing fast — book these before your date is gone!</p>
+  <!-- HOT NEW ARRIVALS -->
+  <section class="hna-section">
+
+    <!-- Floating background elements -->
+    <div class="hna-bg-elements" aria-hidden="true">
+      <span class="hna-bal" style="left:2%;animation-delay:0s;">🎈</span>
+      <span class="hna-bal" style="left:96%;animation-delay:-4s;">🎈</span>
+      <span class="hna-bal" style="left:50%;animation-delay:-8s;">🎈</span>
+      <span class="hna-confetti hna-c1"></span>
+      <span class="hna-confetti hna-c2"></span>
+      <span class="hna-confetti hna-c3"></span>
+      <span class="hna-confetti hna-c4"></span>
+      <span class="hna-confetti hna-c5"></span>
+      <span class="hna-confetti hna-c6"></span>
+      <span class="hna-confetti hna-c7"></span>
+      <span class="hna-confetti hna-c8"></span>
+    </div>
+
+    <div class="container" style="position:relative;z-index:1;">
+
+      <!-- Header -->
+      <div class="hna-header reveal">
+        <div class="hna-badge">🔥 JUST ADDED</div>
+        <h2 class="hna-title">Hot New Arrivals</h2>
+        <p class="hna-sub">Be the first to book our newest party attractions before your date fills up.</p>
       </div>
-      <div class="new-arrivals-grid">
-        <div class="new-arrival-card reveal delay-1">
-          <div class="card-img-wrap" style="position:relative;">
-            <span class="new-arrival-badge">🆕 New!</span>
-            <img src="images/football-toss.jpg" alt="Football Toss Game" style="width:100%;height:200px;object-fit:cover;"/>
+
+      <!-- Cards -->
+      <div class="hna-grid">
+
+        <div class="hna-card reveal delay-1">
+          <div class="hna-card-img-wrap">
+            <img src="images/football-toss.jpg" alt="Football Toss Challenge"/>
+            <div class="hna-card-img-overlay"></div>
+            <span class="hna-pill hna-pill-new">🆕 New Arrival</span>
           </div>
-          <div class="card-body">
-            <h3>Football Toss Game</h3>
-            <p>Getting tons of attention! Giant inflatable football toss — perfect for tailgates, school events &amp; parties.</p>
-            <a href="contact.html" class="btn btn-primary" style="font-size:0.9rem;padding:10px 22px;">Book Now</a>
-          </div>
-        </div>
-        <div class="new-arrival-card reveal delay-2">
-          <div class="card-img-wrap" style="position:relative;">
-            <span class="new-arrival-badge">🔥 Hot Seller</span>
-            <img src="https://static.wixstatic.com/media/8d967a_6dedd7dafd3c4170939bd08f801cb075~mv2.png/v1/fill/w_500,h_200,al_c,q_85,enc_avif,quality_auto/OBSTACLE%202.png" alt="Obstacle Course" style="width:100%;height:200px;object-fit:cover;"/>
-          </div>
-          <div class="card-body">
-            <h3>Obstacle Course Rentals</h3>
-            <p>One of our hottest sellers! High-energy fun for schools, festivals, corporate events &amp; more.</p>
-            <a href="contact.html" class="btn btn-primary" style="font-size:0.9rem;padding:10px 22px;">Book Now</a>
+          <div class="hna-card-body">
+            <h3>Football Toss Challenge</h3>
+            <p>Giant inflatable football toss that brings the stadium energy to your backyard — perfect for tailgates, school carnivals &amp; birthday bashes.</p>
+            <div class="hna-card-footer">
+              <a href="contact.html" class="hna-cta">Check Availability →</a>
+            </div>
           </div>
         </div>
-        <div class="new-arrival-card reveal delay-3">
-          <div class="card-img-wrap" style="position:relative;">
-            <span class="new-arrival-badge">✨ Differentiator</span>
-            <img src="images/glow-golf.png" alt="Glow Golf" style="width:100%;height:200px;object-fit:cover;"/>
+
+        <div class="hna-card reveal delay-2">
+          <div class="hna-card-img-wrap">
+            <img src="images/combo-bounce-house-v2.jpg" alt="Obstacle Course Combo"/>
+            <div class="hna-card-img-overlay"></div>
+            <span class="hna-pill hna-pill-hot">🔥 Hot Seller</span>
           </div>
-          <div class="card-body">
+          <div class="hna-card-body">
+            <h3>Obstacle Course Combo</h3>
+            <p>Our most-requested combo unit — bounce, climb, slide, and race all in one massive inflatable built for non-stop fun at any event.</p>
+            <div class="hna-card-footer">
+              <a href="contact.html" class="hna-cta">Reserve Your Date →</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="hna-card reveal delay-3">
+          <div class="hna-card-img-wrap">
+            <img src="images/glow-golf.png" alt="Glow-in-the-Dark Mini Golf"/>
+            <div class="hna-card-img-overlay"></div>
+            <span class="hna-pill hna-pill-limited">🎉 Limited Availability</span>
+          </div>
+          <div class="hna-card-body">
             <h3>Glow-in-the-Dark Mini Golf</h3>
-            <p>A true differentiator — nobody else has this! 4 or 9 hole mobile glow golf for day or night events.</p>
-            <a href="contact.html" class="btn btn-primary" style="font-size:0.9rem;padding:10px 22px;">Book Now</a>
+            <p>Nobody else has this! A 4 or 9-hole mobile glow golf course that transforms any space into a magical, glowing party experience — day or night.</p>
+            <div class="hna-card-footer">
+              <a href="contact.html" class="hna-cta">Reserve Your Date →</a>
+            </div>
           </div>
         </div>
+
       </div>
+
+      <!-- View All CTA -->
+      <div class="hna-view-all reveal">
+        <a href="inventory.html" class="hna-view-btn">View All Rentals →</a>
+      </div>
+
     </div>
   </section>
 

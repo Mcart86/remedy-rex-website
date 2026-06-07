@@ -183,7 +183,7 @@ a { text-decoration: none; color: inherit; }
     linear-gradient(rgba(5,15,40,0.55) 0%, rgba(5,15,40,0.55) 100%),
     url("../images/hero-main.jpg");
   background-size: cover;
-  background-position: center 60%;
+  background-position: center 40%;
   background-repeat: no-repeat;
 }
 .hero-grid-overlay {

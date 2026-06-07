@@ -180,7 +180,7 @@ a { text-decoration: none; color: inherit; }
 .hero-bg {
   position: absolute; inset: 0; z-index: 0;
   background-image: 
-    linear-gradient(to top, rgba(5,15,40,0.92) 0%, rgba(5,15,40,0.55) 45%, rgba(5,15,40,0.15) 100%),
+    linear-gradient(to right, rgba(5,15,40,0.88) 0%, rgba(5,15,40,0.6) 40%, rgba(5,15,40,0.25) 100%),
     url("../images/hero-main.jpg");
   background-size: cover;
   background-position: center 30%;
@@ -202,9 +202,9 @@ a { text-decoration: none; color: inherit; }
 }
 .hero-inner {
   position: relative; z-index: 3;
-  width: 100%;
-  padding: 0 48px 80px 48px;
-  display: flex; flex-direction: column; justify-content: flex-end;
+  width: 100%; max-width: 1300px; margin: 0 auto;
+  padding: 140px 48px 80px 48px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;
   min-height: 100vh;
 }
 .hero-content {
@@ -267,10 +267,8 @@ a { text-decoration: none; color: inherit; }
 
 /* Hero visual */
 .hero-visual {
-  position: absolute;
-  top: 120px;
-  right: 48px;
-  z-index: 4;
+  position: relative;
+  display: flex; flex-direction: column; gap: 16px; align-items: flex-end;
   animation: fadeSlideUp 0.8s 0.2s ease both;
 }
 .hero-visual::before { display: none; }
@@ -304,9 +302,9 @@ a { text-decoration: none; color: inherit; }
 .hero-float-card .card-icon { font-size: 1.8rem; }
 .hero-float-card strong { display: block; font-size: 0.95rem; color: var(--navy); font-weight: 800; }
 .hero-float-card span { font-size: 0.78rem; color: var(--text-mid); }
-.fc-1 { top: 0px; right: 0px; left: auto; animation-delay: 0s; }
-.fc-2 { top: 80px; right: 0px; left: auto; animation-delay: -2s; }
-.fc-3 { top: 160px; right: 0px; animation-delay: -4s; }
+.fc-1 { position: relative; top: auto; left: auto; right: auto; bottom: auto; align-self: flex-end; animation-delay: 0s; }
+.fc-2 { position: relative; top: auto; left: auto; right: auto; bottom: auto; align-self: flex-start; animation-delay: -2s; }
+.fc-3 { position: relative; top: auto; left: auto; right: auto; bottom: auto; align-self: flex-end; animation-delay: -4s; }
 
 .hero-img-mini {
   display: none;

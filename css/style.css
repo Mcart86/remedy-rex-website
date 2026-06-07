@@ -180,7 +180,7 @@ a { text-decoration: none; color: inherit; }
 .hero-bg {
   position: absolute; inset: 0; z-index: 0;
   background-image: 
-    linear-gradient(rgba(30,144,255,0.45) 0%, rgba(30,144,255,0.45) 100%),
+    linear-gradient(135deg, rgba(20,45,95,0.65) 0%, rgba(20,45,95,0.55) 50%, rgba(20,45,95,0.4) 100%),
     url("../images/hero-main.jpg");
   background-size: cover;
   background-position: center 40%;

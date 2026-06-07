@@ -13,7 +13,7 @@
     /* SCROLL PROGRESS BAR */
     #progress-bar {
       position: fixed; top: 0; left: 0; height: 4px; width: 0%;
-      background: linear-gradient(90deg, #FF6B2B, #FFD600, #FF3FA4, #00ADEF, #00C97A);
+      background: linear-gradient(90deg, #FF8C00, #FFD700, #FF4500, #1E90FF, #2ECC40);
       z-index: 9999; transition: width 0.1s linear;
       box-shadow: 0 0 10px rgba(255,107,43,0.6);
     }
@@ -36,11 +36,11 @@
     /* WOBBLY CARDS */
     .rental-card { transform-style: preserve-3d; will-change: transform; }
     /* COLORFUL BORDERS BY CATEGORY */
-    .cards-grid .rental-card:nth-child(1) { --card-color: #FF6B2B; }
-    .cards-grid .rental-card:nth-child(2) { --card-color: #FF3FA4; }
-    .cards-grid .rental-card:nth-child(3) { --card-color: #00ADEF; }
-    .cards-grid .rental-card:nth-child(4) { --card-color: #FFD600; }
-    .cards-grid .rental-card:nth-child(5) { --card-color: #00C97A; }
+    .cards-grid .rental-card:nth-child(1) { --card-color: #FF8C00; }
+    .cards-grid .rental-card:nth-child(2) { --card-color: #FF4500; }
+    .cards-grid .rental-card:nth-child(3) { --card-color: #1E90FF; }
+    .cards-grid .rental-card:nth-child(4) { --card-color: #FFD700; }
+    .cards-grid .rental-card:nth-child(5) { --card-color: #2ECC40; }
     .cards-grid .rental-card:nth-child(6) { --card-color: #9B59B6; }
     .rental-card:hover { border-color: var(--card-color) !important; box-shadow: 0 20px 60px color-mix(in srgb, var(--card-color) 30%, transparent) !important; }
     /* BOUNCY BADGES */
@@ -56,7 +56,7 @@
     .ribbon-wrap { position: absolute; top: 0; right: 0; width: 80px; height: 80px; overflow: hidden; z-index: 2; }
     .ribbon {
       position: absolute; top: 18px; right: -22px;
-      background: #FF3FA4; color: #fff;
+      background: #FF4500; color: #fff;
       font-size: 0.65rem; font-weight: 900; text-transform: uppercase;
       padding: 4px 28px; transform: rotate(45deg);
       letter-spacing: 1px; box-shadow: 0 2px 8px rgba(0,0,0,0.2);
@@ -404,7 +404,7 @@
 
 
   <!-- FUN FACTS TICKER -->
-  <div style="background:linear-gradient(135deg,#FF6B2B,#FF3FA4);padding:12px 0;overflow:hidden;position:relative;">
+  <div style="background:linear-gradient(135deg,#FF8C00,#FF4500);padding:12px 0;overflow:hidden;position:relative;">
     <div style="display:flex;animation:ticker 25s linear infinite;white-space:nowrap;">
       <span style="color:#fff;font-weight:900;font-size:0.88rem;letter-spacing:1px;padding:0 32px;">🎉 100+ HAPPY FAMILIES SERVED</span>
       <span style="color:rgba(255,255,255,0.5);padding:0 8px;">★</span>
@@ -637,16 +637,16 @@
 
 
   <!-- SISTER BRAND -->
-  <section style="background: linear-gradient(135deg, #000d2e 0%, #001040 50%, #000d2e 100%); padding: 80px 0; position:relative; overflow:hidden;">
+  <section style="background: linear-gradient(135deg, #1a1a2e 0%, #1a1a2e 50%, #1a1a2e 100%); padding: 80px 0; position:relative; overflow:hidden;">
     <div style="position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 80% 50%, rgba(201,169,110,0.15) 0%, transparent 60%), radial-gradient(ellipse 40% 40% at 20% 50%, rgba(255,107,43,0.1) 0%, transparent 55%);"></div>
     <div class="container" style="position:relative;z-index:1;">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;">
         <div class="reveal-left">
-          <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(201,169,110,0.15);border:1px solid rgba(201,169,110,0.3);color:#c9a96e;font-weight:900;font-size:0.8rem;text-transform:uppercase;letter-spacing:2px;padding:7px 20px;border-radius:50px;margin-bottom:20px;">
+          <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(201,169,110,0.15);border:1px solid rgba(201,169,110,0.3);color:#FFD700;font-weight:900;font-size:0.8rem;text-transform:uppercase;letter-spacing:2px;padding:7px 20px;border-radius:50px;margin-bottom:20px;">
             🤝 Sister Company
           </div>
           <h2 style="font-family:'Fredoka One',cursive;font-size:clamp(2rem,3.5vw,2.8rem);color:#fff;margin-bottom:16px;line-height:1.15;">Need Full Event<br/>Planning Too?</h2>
-          <p style="color:rgba(255,255,255,0.75);font-size:1.05rem;line-height:1.8;margin-bottom:28px;">Remedy Rex handles the fun — our sister company <strong style="color:#c9a96e;">Remedy Entertainment</strong> handles everything else. From concept to cleanup, they manage every detail so you don't have to.</p>
+          <p style="color:rgba(255,255,255,0.75);font-size:1.05rem;line-height:1.8;margin-bottom:28px;">Remedy Rex handles the fun — our sister company <strong style="color:#FFD700;">Remedy Entertainment</strong> handles everything else. From concept to cleanup, they manage every detail so you don't have to.</p>
           <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:36px;">
             <div style="display:flex;align-items:center;gap:12px;color:rgba(255,255,255,0.8);font-size:0.95rem;">
               <span style="width:32px;height:32px;background:rgba(201,169,110,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;">🎨</span>
@@ -670,17 +670,17 @@
             </div>
           </div>
           <div style="display:flex;gap:16px;flex-wrap:wrap;">
-            <a href="https://www.remedyent.com" target="_blank" rel="noopener" class="btn" style="background:linear-gradient(135deg,#c9a96e,#f0d08a);color:#000d2e;border:none;font-weight:900;">Visit RemedyEnt.com →</a>
+            <a href="https://www.remedyent.com" target="_blank" rel="noopener" class="btn" style="background:linear-gradient(135deg,#FFD700,#f0d08a);color:#1a1a2e;border:none;font-weight:900;">Visit RemedyEnt.com →</a>
             <a href="https://calendly.com/anthony-remedysm" target="_blank" rel="noopener" class="btn btn-outline">Book a Consultation</a>
           </div>
         </div>
         <div class="reveal-right" style="text-align:center;">
           <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(201,169,110,0.2);border-radius:28px;padding:48px 36px;">
             <div style="font-size:4rem;margin-bottom:20px;">🎪</div>
-            <h3 style="font-family:'Fredoka One',cursive;font-size:1.8rem;color:#c9a96e;margin-bottom:12px;">Bundle &amp; Save</h3>
+            <h3 style="font-family:'Fredoka One',cursive;font-size:1.8rem;color:#FFD700;margin-bottom:12px;">Bundle &amp; Save</h3>
             <p style="color:#666666;font-size:1rem;line-height:1.8;margin-bottom:28px;">Book Remedy Rex inflatables AND Remedy Entertainment planning services together for a seamless, fully-managed event experience — at the best combined rate.</p>
             <div style="background:rgba(201,169,110,0.1);border:1px solid rgba(201,169,110,0.25);border-radius:var(--radius);padding:20px;margin-bottom:24px;">
-              <p style="color:#c9a96e;font-weight:800;font-size:0.9rem;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">The Ultimate Event Package</p>
+              <p style="color:#FFD700;font-weight:800;font-size:0.9rem;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">The Ultimate Event Package</p>
               <p style="color:#444444;font-size:0.9rem;line-height:1.7;">Inflatables + Games + Tents + Full Décor + Photography + Planning = One Epic Event</p>
             </div>
             <a href="mailto:anthony@remedysm.com" class="btn btn-primary" style="width:100%;justify-content:center;">Ask About Combined Packages →</a>

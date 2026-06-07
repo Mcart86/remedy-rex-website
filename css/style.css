@@ -3,24 +3,24 @@
    ============================================ */
 
 :root {
-  --orange:    #FF6B2B;
-  --orange-d:  #e8511a;
-  --orange-l:  #ff8c55;
-  --yellow:    #FFD600;
+  --orange:    #FF8C00;
+  --orange-d:  #e07a00;
+  --orange-l:  #ffA030;
+  --yellow:    #FFD700;
   --yellow-d:  #e6c000;
-  --blue:      #00ADEF;
-  --blue-d:    #007fc0;
-  --pink:      #FF3FA4;
-  --green:     #00C97A;
-  --navy:      #0f1f3d;
-  --navy-l:    #1a3358;
-  --navy-ll:   #243d65;
+  --blue:      #1E90FF;
+  --blue-d:    #0070e0;
+  --pink:      #FF4500;
+  --green:     #2ECC40;
+  --navy:      #1a1a2e;
+  --navy-l:    #2a2a3e;
+  --navy-ll:   #3a3a50;
   --white:     #ffffff;
-  --off-white: #FFF9F2;
-  --cream:     #FEF3E2;
-  --gray:      #f0f0f0;
+  --off-white: #ffffff;
+  --cream:     #ffffff;
+  --gray:      #f5f5f5;
   --text:      #1a1a2e;
-  --text-mid:  #5a5a72;
+  --text-mid:  #555566;
   --radius:    20px;
   --radius-sm: 12px;
   --radius-lg: 32px;
@@ -84,7 +84,7 @@ a { text-decoration: none; color: inherit; }
 .btn-outline { background: rgba(255,255,255,0.08); color: #ffffff; border-color: rgba(255,255,255,0.5); backdrop-filter: blur(8px); }
 .btn-outline:hover { background: rgba(255,255,255,0.2); border-color: rgba(255,255,255,0.85); color: #ffffff; }
 
-.btn-card { background: #001F5B; color: #ffffff; padding: 11px 24px; font-size: 0.9rem; border-color: var(--navy); }
+.btn-card { background: #1a1a2e; color: #ffffff; padding: 11px 24px; font-size: 0.9rem; border-color: var(--navy); }
 .btn-card:hover { background: var(--orange); border-color: var(--orange); box-shadow: 0 8px 24px rgba(255,107,43,0.35); }
 
 .btn-white { background: #fff; color: var(--orange); border-color: #111111; font-weight: 900; }
@@ -175,12 +175,12 @@ a { text-decoration: none; color: inherit; }
   position: relative; min-height: 100vh;
   display: flex; align-items: center;
   overflow: hidden;
-  background: #001F5B;
+  background: #1a1a2e;
 }
 .hero-bg {
   position: absolute; inset: 0; z-index: 0;
   background-image: 
-    linear-gradient(rgba(5,15,40,0.55) 0%, rgba(5,15,40,0.55) 100%),
+    linear-gradient(rgba(26,26,46,0.55) 0%, rgba(26,26,46,0.55) 100%),
     url("../images/hero-main.jpg");
   background-size: cover;
   background-position: center 40%;
@@ -232,14 +232,14 @@ a { text-decoration: none; color: inherit; }
 .hero-title .line-1 { display: block; }
 .hero-title .line-2 {
   display: block;
-  background: linear-gradient(120deg, #FFD600 0%, #FF851B 45%, #FF3FA4 100%);
+  background: linear-gradient(120deg, #FFD700 0%, #FF851B 45%, #FF4500 100%);
   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
   position: relative;
 
 }
 .hero-title .line-2-inline {
   display: inline;
-  background: linear-gradient(120deg, #FFD600 0%, #FF851B 45%, #FF3FA4 100%);
+  background: linear-gradient(120deg, #FFD700 0%, #FF851B 45%, #FF4500 100%);
   -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
 
 }
@@ -372,7 +372,7 @@ a { text-decoration: none; color: inherit; }
   padding: 80px 0;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  background: linear-gradient(135deg, #1E90FF 0%, #2ECC40 100%);
 }
 .services-strip::before {
   content: "";
@@ -529,7 +529,7 @@ a { text-decoration: none; color: inherit; }
 .water-text p { color: rgba(255,255,255,0.9); font-size: 1.1rem; line-height: 1.6; }
 
 /* ===== TESTIMONIALS ===== */
-.testimonials { background: #001F5B; padding: 100px 0; position: relative; overflow: hidden; }
+.testimonials { background: #1a1a2e; padding: 100px 0; position: relative; overflow: hidden; }
 .testimonials::before {
   content: '"'; position: absolute; top: -40px; left: 50%; transform: translateX(-50%);
   font-family: 'Fredoka One', cursive; font-size: 300px; color: rgba(255,255,255,0.03); line-height: 1;
@@ -643,7 +643,7 @@ a { text-decoration: none; color: inherit; }
 
 /* ===== FINAL CTA ===== */
 .final-cta {
-  background: linear-gradient(135deg, #FF4136 0%, #FF851B 50%, #FFDC00 100%);
+  background: linear-gradient(135deg, #FF4500 0%, #FF851B 50%, #FFD700 100%);
   padding: 100px 0; position: relative; overflow: hidden;
 }
 .final-cta::before {
@@ -657,7 +657,7 @@ a { text-decoration: none; color: inherit; }
 .final-cta-inner p { font-size: 1.2rem; color: rgba(255,255,255,0.9); margin-bottom: 40px; }
 
 /* ===== FOOTER ===== */
-.footer { background: #001F5B; color: rgba(255,255,255,0.7); }
+.footer { background: #1a1a2e; color: rgba(255,255,255,0.7); }
 .footer-top { padding: 80px 0 60px; }
 .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.6fr; gap: 60px; }
 .footer-brand img { width: 72px; height: 72px; border-radius: 50%; background: rgba(255,255,255,0.1); padding: 4px; margin-bottom: 20px; border: 2px solid rgba(255,255,255,0.15); }
@@ -700,7 +700,7 @@ a { text-decoration: none; color: inherit; }
 
 /* ===== INNER PAGE HERO ===== */
 .page-hero {
-  background: linear-gradient(135deg, #FF851B 0%, #FF4136 40%, #FF3FA4 100%);
+  background: linear-gradient(135deg, #FF851B 0%, #FF4500 40%, #FF4500 100%);
   padding: 150px 24px 90px; text-align: center; position: relative; overflow: hidden;
 }
 .page-hero::before {
@@ -870,7 +870,7 @@ section:not(.services-strip) .strip-item:hover {
 
 /* ===== NEW ARRIVALS SECTION ===== */
 .new-arrivals {
-  background: linear-gradient(135deg, #FF851B 0%, #FF4136 50%, #FFDC00 100%);
+  background: linear-gradient(135deg, #FF851B 0%, #FF4500 50%, #FFD700 100%);
   padding: 80px 0;
   position: relative;
   overflow: hidden;
@@ -947,7 +947,7 @@ section:not(.services-strip) .strip-item:hover {
 .decor-card-img.backdrop-bg { background: linear-gradient(135deg, #1a1a3e, #3d1a78); }
 .decor-card-img.linen-bg { background: linear-gradient(135deg, #c9a96e, #f0d08a); }
 .decor-card-img.marquee-bg { background: linear-gradient(135deg, #ff6b2b, #ffd600); }
-.decor-card-img.package-bg { background: linear-gradient(135deg, #00c97a, #00adef); }
+.decor-card-img.package-bg { background: linear-gradient(135deg, #2ECC40, #00adef); }
 .decor-card-body { padding: 24px; }
 .decor-card-body h3 { font-size: 1.2rem; color: var(--navy); margin-bottom: 8px; }
 .decor-card-body p { font-size: 0.9rem; color: var(--text-mid); line-height: 1.7; margin-bottom: 16px; }
@@ -1081,7 +1081,7 @@ section:not(.services-strip) .strip-item:hover {
   content: '';
   display: block;
   height: 4px;
-  background: linear-gradient(90deg, #FF6B2B, #FFD600, #00ADEF, #FF3FA4, #00C97A);
+  background: linear-gradient(90deg, #FF8C00, #FFD700, #1E90FF, #FF4500, #2ECC40);
   border-radius: 4px;
   margin-top: 4px;
   animation: rainbowSlide 3s ease-in-out infinite;

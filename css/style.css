@@ -185,6 +185,8 @@ a { text-decoration: none; color: inherit; }
   background-size: cover;
   background-position: center 40%;
   background-repeat: no-repeat;
+  will-change: transform;
+  transform: translateZ(0);
 }
 .hero-grid-overlay { display: none; }
 .hero-particles {

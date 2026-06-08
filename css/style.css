@@ -635,8 +635,8 @@ a { text-decoration: none; color: inherit; }
 .instagram:hover { box-shadow: 0 12px 28px rgba(253,29,29,0.4); }
 .facebook { background: #1E90FF; }
 .facebook:hover { box-shadow: 0 12px 28px rgba(24,119,242,0.4); }
-.tiktok { background: #000; }
-.tiktok:hover { box-shadow: 0 12px 28px rgba(0,0,0,0.4); }
+.tiktok { background: #111111; color: #ffffff; }
+.tiktok:hover { background: #333333; color: #ffffff; box-shadow: 0 12px 28px rgba(0,0,0,0.4); }
 .social-handle {
   font-size: 0.95rem; color: var(--text-mid);
   background: #ffffff; padding: 12px 24px;

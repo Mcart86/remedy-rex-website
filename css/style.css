@@ -2428,3 +2428,175 @@ section:not(.services-strip) .strip-item:hover {
   .mcta-stat-div { display: none; }
   .mcta-stats { gap: 16px; }
 }
+
+/* ===== INVENTORY PAGE — FULL REDESIGN ===== */
+
+/* TRUST STRIP */
+.inv-trust-strip {
+  background: #ffffff;
+  padding: 32px 0;
+  box-shadow: 0 4px 24px rgba(30,144,255,0.08);
+  border-bottom: 1px solid rgba(30,144,255,0.1);
+}
+.inv-trust-grid {
+  display: grid; grid-template-columns: repeat(4,1fr); gap: 20px;
+}
+.inv-trust-card {
+  display: flex; align-items: center; gap: 14px;
+  background: #ffffff;
+  border: 1.5px solid rgba(30,144,255,0.12);
+  border-radius: 16px; padding: 18px 20px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.inv-trust-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(30,144,255,0.15);
+}
+.inv-trust-icon { font-size: 2rem; flex-shrink: 0; }
+.inv-trust-card strong { display: block; font-size: 0.9rem; color: #142D5F; font-weight: 800; margin-bottom: 3px; }
+.inv-trust-card p { font-size: 0.78rem; color: #666; margin: 0; line-height: 1.4; }
+
+/* STICKY CATEGORY NAV */
+.cat-nav {
+  position: sticky; top: 70px; z-index: 90;
+  background: #ffffff;
+  border-bottom: 2px solid rgba(30,144,255,0.12);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+.cat-nav-inner {
+  display: flex; gap: 4px; padding: 0 8px;
+  overflow-x: auto; -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.cat-nav-inner::-webkit-scrollbar { display: none; }
+.cat-nav-link {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 14px 20px; white-space: nowrap;
+  font-family: 'Fredoka One', cursive;
+  font-size: 0.95rem; color: #555;
+  border-bottom: 3px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+  text-decoration: none;
+}
+.cat-nav-link:hover { color: #FF8C00; border-bottom-color: #FF8C00; }
+.cat-nav-link.active { color: #1E90FF; border-bottom-color: #1E90FF; }
+
+/* CATALOG SECTION */
+.inv-catalog {
+  background: linear-gradient(180deg, #F4F9FF 0%, #ffffff 100%);
+  padding: 80px 0 100px;
+}
+
+/* CATEGORY HEADER */
+.inv-cat-header {
+  margin: 80px 0 32px;
+  padding-bottom: 20px;
+  border-bottom: 3px solid #EBF5FF;
+}
+.inv-cat-header:first-child { margin-top: 0; }
+.inv-cat-header h2 {
+  font-family: 'Fredoka One', cursive;
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  color: #142D5F; margin-bottom: 8px;
+}
+.inv-cat-header p {
+  font-size: 1rem; color: #555; line-height: 1.7; max-width: 640px;
+}
+
+/* INVENTORY GRIDS */
+.inv-grid { display: grid; gap: 24px; }
+.inv-grid-3 { grid-template-columns: repeat(3,1fr); }
+.inv-grid-4 { grid-template-columns: repeat(4,1fr); }
+
+/* INVENTORY CARDS */
+.inv-card {
+  background: #ffffff;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 6px 24px rgba(30,144,255,0.09);
+  border: 1.5px solid rgba(30,144,255,0.08);
+  transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1),
+              box-shadow 0.4s ease, border-color 0.3s ease;
+  display: flex; flex-direction: column;
+}
+.inv-card:hover {
+  transform: translateY(-12px) scale(1.015);
+  box-shadow: 0 20px 56px rgba(255,140,0,0.25), 0 6px 20px rgba(0,0,0,0.08);
+  border-color: #FF8C00;
+}
+
+/* Wide card for orphans */
+.inv-card-wide { grid-column: span 1; }
+
+/* Card image */
+.inv-img-wrap {
+  position: relative; height: 220px; overflow: hidden;
+}
+.inv-grid-4 .inv-img-wrap { height: 190px; }
+.inv-img-wrap img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.55s ease;
+}
+.inv-card:hover .inv-img-wrap img { transform: scale(1.1); }
+.inv-img-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(20,45,95,0.45) 0%, transparent 55%);
+}
+
+/* Badges */
+.inv-badge {
+  position: absolute; top: 12px; left: 12px;
+  font-family: 'Fredoka One', cursive;
+  font-size: 0.75rem; padding: 4px 12px;
+  border-radius: 50px; color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2); z-index: 2;
+}
+.inv-badge-orange { background: #FF8C00; }
+.inv-badge-red    { background: #FF4500; }
+.inv-badge-yellow { background: #FF8C00; }
+.inv-badge-green  { background: #2ECC40; }
+.inv-badge-blue   { background: #1E90FF; }
+
+/* Card body */
+.inv-body { padding: 18px 20px 22px; display: flex; flex-direction: column; flex: 1; }
+.inv-cat-label {
+  display: inline-block;
+  font-size: 0.72rem; font-weight: 800;
+  text-transform: uppercase; letter-spacing: 0.8px;
+  color: #FF8C00; margin-bottom: 8px;
+}
+.inv-body h3 {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.15rem; color: #142D5F;
+  margin-bottom: 8px; line-height: 1.2;
+}
+.inv-grid-4 .inv-body h3 { font-size: 1.05rem; }
+.inv-body p { font-size: 0.87rem; color: #555; line-height: 1.65; flex: 1; margin-bottom: 16px; }
+.inv-btn {
+  display: inline-block;
+  background: #1E90FF; color: #ffffff;
+  font-family: 'Fredoka One', cursive;
+  font-size: 0.88rem; padding: 10px 20px;
+  border-radius: 50px; margin-top: auto;
+  box-shadow: 0 3px 12px rgba(30,144,255,0.3);
+  transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  align-self: flex-start;
+}
+.inv-btn:hover {
+  background: #FF8C00;
+  box-shadow: 0 6px 22px rgba(255,140,0,0.45);
+  transform: translateX(4px);
+}
+
+@media(max-width:1100px){
+  .inv-trust-grid { grid-template-columns: repeat(2,1fr); }
+  .inv-grid-4 { grid-template-columns: repeat(2,1fr); }
+}
+@media(max-width:760px){
+  .inv-trust-grid { grid-template-columns: 1fr; }
+  .inv-grid-3, .inv-grid-4 { grid-template-columns: repeat(2,1fr); }
+}
+@media(max-width:480px){
+  .inv-grid-3, .inv-grid-4 { grid-template-columns: 1fr; }
+}

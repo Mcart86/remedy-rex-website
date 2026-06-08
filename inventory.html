@@ -209,5 +209,31 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script>
+    // Sticky category nav active state on scroll
+    const catLinks = document.querySelectorAll('.cat-nav-link');
+    const sections = ['bounce-houses','obstacle-courses','games','tents','event-extras'];
+    function updateActiveNav() {
+      let current = sections[0];
+      sections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el && window.scrollY >= el.getBoundingClientRect().top + window.scrollY - 160) {
+          current = id;
+        }
+      });
+      catLinks.forEach(link => {
+        link.classList.toggle('active', link.dataset.section === current);
+      });
+    }
+    window.addEventListener('scroll', updateActiveNav, { passive: true });
+    // Smooth scroll
+    catLinks.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.getElementById(link.dataset.section);
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+  </script>
 </body>
 </html>

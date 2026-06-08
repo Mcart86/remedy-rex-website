@@ -870,32 +870,45 @@
 
 
   <!-- LATEST BLOG -->
-  <section class="section-pad" style="background:#fff;">
+  <section class="blog-v2">
     <div class="container">
       <div class="section-header reveal">
         <div class="section-tag">📝 From the Blog</div>
         <h2>Latest from Remedy Rex</h2>
         <p>Tips, news and stories straight from the team.</p>
       </div>
-      <div id="homeBlogPosts" style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px;"></div>
+      <div id="homeBlogPosts" class="blog-v2-grid"></div>
       <div class="section-cta reveal">
         <a href="blog.html" class="btn btn-primary">View All Posts →</a>
       </div>
     </div>
   </section>
+
+  <!-- Wave divider blog → sister -->
+  <div class="wave-divider" aria-hidden="true">
+    <svg viewBox="0 0 1440 90" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,30 C180,80 360,0 540,45 C720,90 900,10 1080,50 C1260,90 1380,30 1440,45 L1440,90 L0,90 Z" fill="#1E90FF"/>
+    </svg>
+  </div>
+
   <script>
     fetch('posts/posts.json')
       .then(r => r.json())
       .then(posts => {
         const latest = posts.slice(0,3);
+        const readTime = txt => Math.max(1, Math.ceil((txt||'').split(' ').length / 200));
         document.getElementById('homeBlogPosts').innerHTML = latest.map(p => `
-          <a href="post.html?slug=${p.slug}" style="display:flex;flex-direction:column;background:var(--off-white);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);border:1.5px solid rgba(0,0,0,0.06);transition:transform 0.3s,box-shadow 0.3s;text-decoration:none;" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='var(--shadow-xl)'" onmouseout="this.style.transform='';this.style.boxShadow='var(--shadow-sm)'">
-            <img src="${p.image}" alt="${p.title}" style="width:100%;height:180px;object-fit:cover;"/>
-            <div style="padding:22px;flex:1;display:flex;flex-direction:column;">
-              <span style="display:inline-block;background:var(--yellow);color:var(--navy);font-weight:900;font-size:0.72rem;text-transform:uppercase;letter-spacing:0.5px;padding:4px 12px;border-radius:50px;margin-bottom:10px;">${p.category}</span>
-              <h3 style="font-family:Fredoka One,cursive;font-size:1.1rem;color:var(--navy);margin-bottom:8px;line-height:1.3;">${p.title}</h3>
-              <p style="font-size:0.88rem;color:var(--text-mid);line-height:1.6;flex:1;margin-bottom:14px;">${p.excerpt.substring(0,100)}...</p>
-              <span style="color:var(--orange);font-weight:800;font-size:0.88rem;">Read More →</span>
+          <a href="post.html?slug=${p.slug}" class="bv2-card">
+            <div class="bv2-img-wrap">
+              <img src="${p.image}" alt="${p.title}" class="bv2-img"/>
+              <div class="bv2-img-overlay"></div>
+              <span class="bv2-read-time">⏱ ${readTime(p.content)} min read</span>
+            </div>
+            <div class="bv2-body">
+              <span class="bv2-cat">${p.category}</span>
+              <h3 class="bv2-title">${p.title}</h3>
+              <p class="bv2-excerpt">${p.excerpt.substring(0,110)}...</p>
+              <span class="bv2-cta">Read More →</span>
             </div>
           </a>
         `).join('');
@@ -905,55 +918,45 @@
 
 
   <!-- SISTER BRAND -->
-  <section style="background: #1E90FF; padding: 80px 0; position:relative; overflow:hidden;">
-    <div style="position:absolute;inset:0;background:radial-gradient(ellipse 60% 60% at 80% 50%, rgba(201,169,110,0.15) 0%, transparent 60%), radial-gradient(ellipse 40% 40% at 20% 50%, rgba(255,107,43,0.1) 0%, transparent 55%);"></div>
+  <section class="sister-v2">
     <div class="container" style="position:relative;z-index:1;">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;">
+      <div class="sister-grid">
+
+        <!-- Left: text content -->
         <div class="reveal-left">
-          <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(201,169,110,0.15);border:1px solid rgba(201,169,110,0.3);color:#FFD700;font-weight:900;font-size:0.8rem;text-transform:uppercase;letter-spacing:2px;padding:7px 20px;border-radius:50px;margin-bottom:20px;">
-            🤝 Sister Company
+          <div class="sister-badge">🤝 Sister Company</div>
+          <h2 class="sister-headline">Need Full Event<br/>Planning Too?</h2>
+          <p class="sister-sub">Remedy Rex handles the fun — our sister company <strong class="sister-highlight">Remedy Entertainment</strong> handles everything else. From concept to cleanup, they manage every detail so you don't have to.</p>
+
+          <div class="sister-features">
+            <div class="sister-feat"><span class="sister-feat-icon">🎨</span><span>Event Design, Décor &amp; Color Planning</span></div>
+            <div class="sister-feat"><span class="sister-feat-icon">📋</span><span>Full Event Planning &amp; Coordination</span></div>
+            <div class="sister-feat"><span class="sister-feat-icon">📸</span><span>Photography &amp; Videography</span></div>
+            <div class="sister-feat"><span class="sister-feat-icon">🎵</span><span>Entertainment Booking &amp; A/V Setup</span></div>
+            <div class="sister-feat"><span class="sister-feat-icon">🍽️</span><span>Catering Coordination &amp; Vendor Management</span></div>
           </div>
-          <h2 style="font-family:'Fredoka One',cursive;font-size:clamp(2rem,3.5vw,2.8rem);color:#fff;margin-bottom:16px;line-height:1.15;">Need Full Event<br/>Planning Too?</h2>
-          <p style="color:rgba(255,255,255,0.75);font-size:1.05rem;line-height:1.8;margin-bottom:28px;">Remedy Rex handles the fun — our sister company <strong style="color:#FFD700;">Remedy Entertainment</strong> handles everything else. From concept to cleanup, they manage every detail so you don't have to.</p>
-          <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:36px;">
-            <div style="display:flex;align-items:center;gap:12px;color:rgba(255,255,255,0.8);font-size:0.95rem;">
-              <span style="width:32px;height:32px;background:rgba(201,169,110,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;">🎨</span>
-              Event Design, Décor &amp; Color Planning
-            </div>
-            <div style="display:flex;align-items:center;gap:12px;color:rgba(255,255,255,0.8);font-size:0.95rem;">
-              <span style="width:32px;height:32px;background:rgba(201,169,110,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;">📋</span>
-              Full Event Planning &amp; Coordination
-            </div>
-            <div style="display:flex;align-items:center;gap:12px;color:rgba(255,255,255,0.8);font-size:0.95rem;">
-              <span style="width:32px;height:32px;background:rgba(201,169,110,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;">📸</span>
-              Photography &amp; Videography
-            </div>
-            <div style="display:flex;align-items:center;gap:12px;color:rgba(255,255,255,0.8);font-size:0.95rem;">
-              <span style="width:32px;height:32px;background:rgba(201,169,110,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;">🎵</span>
-              Entertainment Booking &amp; A/V Setup
-            </div>
-            <div style="display:flex;align-items:center;gap:12px;color:rgba(255,255,255,0.8);font-size:0.95rem;">
-              <span style="width:32px;height:32px;background:rgba(201,169,110,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;">🍽️</span>
-              Catering Coordination &amp; Vendor Management
-            </div>
-          </div>
-          <div style="display:flex;gap:16px;flex-wrap:wrap;">
-            <a href="https://www.remedyent.com" target="_blank" rel="noopener" class="btn" style="background:#2ECC40;color:#ffffff;border:none;font-weight:900;">Visit RemedyEnt.com →</a>
-            <a href="https://calendly.com/anthony-remedysm" target="_blank" rel="noopener" class="btn btn-outline">Book a Consultation</a>
+
+          <div class="sister-btns">
+            <a href="https://www.remedyent.com" target="_blank" rel="noopener" class="sister-btn-primary">Visit RemedyEnt.com →</a>
+            <a href="https://calendly.com/anthony-remedysm" target="_blank" rel="noopener" class="sister-btn-outline">Book a Consultation</a>
           </div>
         </div>
-        <div class="reveal-right" style="text-align:center;">
-          <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(201,169,110,0.2);border-radius:28px;padding:48px 36px;">
-            <div style="font-size:4rem;margin-bottom:20px;">🎪</div>
-            <h3 style="font-family:'Fredoka One',cursive;font-size:1.8rem;color:#FFD700;margin-bottom:12px;">Bundle &amp; Save</h3>
-            <p style="color:#111111;font-size:1rem;line-height:1.8;margin-bottom:28px;">Book Remedy Rex inflatables AND Remedy Entertainment planning services together for a seamless, fully-managed event experience — at the best combined rate.</p>
-            <div style="background:rgba(201,169,110,0.1);border:1px solid rgba(201,169,110,0.25);border-radius:var(--radius);padding:20px;margin-bottom:24px;">
-              <p style="color:#FFD700;font-weight:800;font-size:0.9rem;text-transform:uppercase;letter-spacing:1px;margin-bottom:8px;">The Ultimate Event Package</p>
-              <p style="color:#111111;font-size:0.9rem;line-height:1.7;">Inflatables + Games + Tents + Full Décor + Photography + Planning = One Epic Event</p>
+
+        <!-- Right: Bundle & Save glassmorphism card -->
+        <div class="reveal-right">
+          <div class="bundle-card">
+            <div class="bundle-popular-badge">🏆 Most Popular Bundle</div>
+            <div class="bundle-icon">🎪</div>
+            <h3 class="bundle-title">Bundle &amp; Save</h3>
+            <p class="bundle-desc">Book Remedy Rex inflatables AND Remedy Entertainment planning services together for a seamless, fully-managed event — at the best combined rate.</p>
+            <div class="bundle-includes">
+              <p class="bundle-includes-label">The Ultimate Event Package</p>
+              <p class="bundle-includes-text">Inflatables + Games + Tents + Full Décor + Photography + Planning = One Epic Event</p>
             </div>
-            <a href="mailto:anthony@remedysm.com" class="btn btn-primary" style="width:100%;justify-content:center;">Ask About Combined Packages →</a>
+            <a href="mailto:anthony@remedysm.com" class="bundle-cta">Ask About Combined Packages →</a>
           </div>
         </div>
+
       </div>
     </div>
   </section>

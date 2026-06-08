@@ -2743,3 +2743,15 @@ section:not(.services-strip) .strip-item:hover {
   margin-bottom: 14px;
   display: block;
 }
+
+/* ===== NAV LOGO TEXT ===== */
+.nav-logo-text {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.55rem;
+  background: linear-gradient(135deg, #FF4500, #FF8C00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  white-space: nowrap;
+  letter-spacing: 0.5px;
+}

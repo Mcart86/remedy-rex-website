@@ -770,55 +770,100 @@
 
 
   <!-- PACKAGES -->
-  <section class="packages">
-    <div class="container">
+  <!-- EVENT PACKAGE BUNDLES -->
+  <section class="pkg-v2">
+
+    <!-- Background deco -->
+    <div class="pkg-bg-deco" aria-hidden="true">
+      <span class="pkg-bal" style="left:1%;animation-delay:0s;">🎈</span>
+      <span class="pkg-bal" style="left:97%;animation-delay:-5s;">🎈</span>
+      <span class="pkg-bal" style="left:50%;animation-delay:-9s;">🎈</span>
+      <span class="pkg-dot" style="top:8%;left:6%;background:#FFD700;width:14px;height:14px;animation-delay:0s;"></span>
+      <span class="pkg-dot" style="top:20%;right:5%;background:#2ECC40;width:10px;height:10px;animation-delay:-1s;"></span>
+      <span class="pkg-dot" style="top:55%;left:3%;background:#FF4500;width:12px;height:12px;animation-delay:-2s;"></span>
+      <span class="pkg-dot" style="top:70%;right:4%;background:#1E90FF;width:16px;height:16px;animation-delay:-3s;"></span>
+      <span class="pkg-dot" style="top:85%;left:45%;background:#FF8C00;width:8px;height:8px;animation-delay:-1.5s;"></span>
+    </div>
+
+    <div class="container" style="position:relative;z-index:1;">
+
       <div class="section-header reveal">
-        <div class="section-tag">🎁 Bundle &amp; Save</div>
-        <h2>Event Package Bundles</h2>
-        <p>More fun, more value — our curated packages make planning easy and maximize your event experience.</p>
+        <div class="pkg-header-badge">🎉 BUNDLE &amp; SAVE</div>
+        <h2 class="pkg-title">Choose Your Perfect Party Package</h2>
+        <p class="pkg-sub">Everything you need for an unforgettable event, bundled together to make planning easy.</p>
       </div>
-      <div class="packages-grid">
-        <div class="package-card reveal delay-1">
-          <div class="package-icon">🏠🎈</div>
-          <h3>Birthday Bounce Package</h3>
-          <p>Everything you need for the perfect birthday party — all in one.</p>
-          <ul class="package-includes">
-            <li>Bounce House of Choice</li>
-            <li>Tables &amp; Chairs</li>
-            <li>Balloon Décor</li>
-            <li>Delivery &amp; Setup</li>
-          </ul>
-          <div class="package-price">Contact for Pricing</div>
-          <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;">Get a Quote</a>
+
+      <div class="pkg-grid">
+
+        <!-- BIRTHDAY BOUNCE -->
+        <div class="pkg-card reveal delay-1">
+          <div class="pkg-img-wrap">
+            <img src="images/castle-bounce-house-v2.jpg" alt="Birthday Bounce Package"/>
+            <div class="pkg-img-overlay"></div>
+            <div class="pkg-event-type">🎂 Birthday Parties</div>
+          </div>
+          <div class="pkg-body">
+            <h3>Birthday Bounce Package</h3>
+            <p class="pkg-desc">The perfect all-in-one birthday setup — just show up and celebrate while we handle the rest.</p>
+            <ul class="pkg-list">
+              <li><span class="pkg-check">✓</span> Bounce House of Choice</li>
+              <li><span class="pkg-check">✓</span> Tables &amp; Chairs</li>
+              <li><span class="pkg-check">✓</span> Balloon Décor</li>
+              <li><span class="pkg-check">✓</span> Delivery &amp; Setup Included</li>
+            </ul>
+            <div class="pkg-best-for">👨‍👩‍👧 Best For: Birthday Parties &amp; Backyard Events</div>
+            <a href="contact.html" class="pkg-btn pkg-btn-default">Check Availability →</a>
+          </div>
         </div>
-        <div class="package-card featured reveal delay-2">
-          <div class="package-popular">⭐ Most Popular</div>
-          <div class="package-icon">🏃⛺🎈</div>
-          <h3>Full Event Package</h3>
-          <p>Our most booked package — obstacle course, tent, décor &amp; more.</p>
-          <ul class="package-includes">
-            <li>Obstacle Course or Combo Unit</li>
-            <li>Tent (Up to 20×20)</li>
-            <li>Tables, Chairs &amp; Linens</li>
-            <li>Balloon Décor &amp; Backdrop</li>
-            <li>On-Site Attendant</li>
-          </ul>
-          <div class="package-price">Contact for Pricing</div>
-          <a href="contact.html" class="btn btn-white" style="width:100%;justify-content:center;">Get a Quote</a>
+
+        <!-- FULL EVENT — FEATURED -->
+        <div class="pkg-card pkg-card-featured reveal delay-2">
+          <div class="pkg-featured-badges">
+            <span class="pkg-feat-badge pfb-popular">🏆 MOST POPULAR</span>
+            <span class="pkg-feat-badge pfb-fav">⭐ CUSTOMER FAVORITE</span>
+            <span class="pkg-feat-badge pfb-value">🎉 BEST VALUE</span>
+          </div>
+          <div class="pkg-img-wrap">
+            <img src="images/combo-bounce-house-v2.jpg" alt="Full Event Package"/>
+            <div class="pkg-img-overlay"></div>
+            <div class="pkg-event-type">🎪 Full Events</div>
+          </div>
+          <div class="pkg-body">
+            <h3>Full Event Package</h3>
+            <p class="pkg-desc">Our most-booked package — a complete event experience from inflatables to décor to on-site staff.</p>
+            <ul class="pkg-list">
+              <li><span class="pkg-check pkg-check-gold">✓</span> Obstacle Course or Combo Unit</li>
+              <li><span class="pkg-check pkg-check-gold">✓</span> Tent (Up to 20×20)</li>
+              <li><span class="pkg-check pkg-check-gold">✓</span> Tables, Chairs &amp; Linens</li>
+              <li><span class="pkg-check pkg-check-gold">✓</span> Balloon Décor &amp; Backdrop</li>
+              <li><span class="pkg-check pkg-check-gold">✓</span> On-Site Attendant</li>
+            </ul>
+            <div class="pkg-best-for pkg-best-for-light">🎯 Best For: Large Parties, Festivals &amp; Corporate Events</div>
+            <a href="contact.html" class="pkg-btn pkg-btn-featured">Build My Package →</a>
+          </div>
         </div>
-        <div class="package-card reveal delay-3">
-          <div class="package-icon">🏫🎮</div>
-          <h3>School Event Package</h3>
-          <p>Field days, carnivals &amp; fundraisers made easy — we handle it all.</p>
-          <ul class="package-includes">
-            <li>2+ Inflatables of Choice</li>
-            <li>Games &amp; Activities</li>
-            <li>Tents &amp; Seating</li>
-            <li>Generator if Needed</li>
-          </ul>
-          <div class="package-price">Contact for Pricing</div>
-          <a href="contact.html" class="btn btn-primary" style="width:100%;justify-content:center;">Get a Quote</a>
+
+        <!-- SCHOOL EVENT -->
+        <div class="pkg-card reveal delay-3">
+          <div class="pkg-img-wrap">
+            <img src="images/jungle-bounce-house-v2.jpg" alt="School Event Package"/>
+            <div class="pkg-img-overlay"></div>
+            <div class="pkg-event-type">🏫 School Events</div>
+          </div>
+          <div class="pkg-body">
+            <h3>School Event Package</h3>
+            <p class="pkg-desc">Field days, carnivals, and fundraisers made effortless — we bring the fun, you take the credit.</p>
+            <ul class="pkg-list">
+              <li><span class="pkg-check">✓</span> 2+ Inflatables of Choice</li>
+              <li><span class="pkg-check">✓</span> Games &amp; Activities</li>
+              <li><span class="pkg-check">✓</span> Tents &amp; Seating</li>
+              <li><span class="pkg-check">✓</span> Generator if Needed</li>
+            </ul>
+            <div class="pkg-best-for">🏫 Best For: Schools, Fundraisers &amp; Community Events</div>
+            <a href="contact.html" class="pkg-btn pkg-btn-default">Get A Quote →</a>
+          </div>
         </div>
+
       </div>
     </div>
   </section>

@@ -1570,3 +1570,220 @@ section:not(.services-strip) .strip-item:hover {
 
 @media(max-width:900px) { .hna-grid { grid-template-columns: repeat(2,1fr); } }
 @media(max-width:580px) { .hna-grid { grid-template-columns: 1fr; } }
+
+/* ===== TOP-RATED RENTALS V2 ===== */
+.featured-v2 {
+  background: linear-gradient(160deg, #EBF5FF 0%, #F0F8FF 50%, #E8F4FF 100%);
+  padding: 110px 0 100px;
+  position: relative;
+}
+.fv2-tag {
+  background: linear-gradient(135deg, #1E90FF, #2ECC40) !important;
+  color: #fff !important;
+  border: none !important;
+}
+.fv2-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 32px;
+  margin-top: 16px;
+}
+.fv2-card {
+  background: #ffffff;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 6px 28px rgba(30,144,255,0.1);
+  transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.4s ease;
+  display: flex; flex-direction: column;
+}
+.fv2-card:hover {
+  transform: translateY(-14px) scale(1.02);
+  box-shadow: 0 24px 60px rgba(30,144,255,0.22), 0 8px 24px rgba(0,0,0,0.1);
+}
+.fv2-img-wrap {
+  position: relative; height: 260px; overflow: hidden;
+}
+.fv2-img-wrap img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.55s ease;
+}
+.fv2-card:hover .fv2-img-wrap img { transform: scale(1.1); }
+.fv2-img-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(20,45,95,0.5) 0%, transparent 55%);
+}
+.fv2-badge {
+  position: absolute; top: 14px; left: 14px;
+  font-family: 'Fredoka One', cursive;
+  font-size: 0.8rem; padding: 5px 14px;
+  border-radius: 50px; color: #fff;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2); z-index: 2;
+}
+.fv2-badge-fav     { background: #FF8C00; }
+.fv2-badge-hot     { background: #FF4500; }
+.fv2-badge-new     { background: #2ECC40; }
+.fv2-badge-blue    { background: #1E90FF; }
+.fv2-badge-green   { background: #2ECC40; }
+.fv2-num {
+  position: absolute; top: 14px; right: 14px;
+  background: #FFD700; color: #111;
+  font-family: 'Fredoka One', cursive;
+  font-size: 1rem; width: 36px; height: 36px;
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2); z-index: 2;
+}
+.fv2-body { padding: 22px 24px 26px; display: flex; flex-direction: column; flex: 1; }
+.fv2-cat {
+  font-size: 0.78rem; font-weight: 800; text-transform: uppercase;
+  letter-spacing: 1px; color: #1E90FF; margin-bottom: 8px; display: block;
+}
+.fv2-body h3 {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.35rem; color: #142D5F;
+  margin-bottom: 10px; line-height: 1.2;
+}
+.fv2-body p { font-size: 0.92rem; color: #444; line-height: 1.7; flex: 1; margin-bottom: 20px; }
+.fv2-footer { margin-top: auto; }
+.fv2-btn {
+  display: inline-block;
+  background: #1E90FF; color: #fff;
+  font-family: 'Fredoka One', cursive;
+  font-size: 0.95rem; padding: 11px 24px;
+  border-radius: 50px;
+  box-shadow: 0 4px 16px rgba(30,144,255,0.35);
+  transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+.fv2-btn:hover {
+  background: #FF8C00;
+  box-shadow: 0 8px 28px rgba(255,140,0,0.5);
+  transform: translateY(-2px) translateX(3px);
+}
+.fv2-cta { text-align: center; margin-top: 56px; }
+.fv2-view-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #1E90FF, #2ECC40);
+  color: #fff; font-family: 'Fredoka One', cursive;
+  font-size: 1.1rem; padding: 16px 48px;
+  border-radius: 50px;
+  box-shadow: 0 8px 28px rgba(30,144,255,0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.fv2-view-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(30,144,255,0.45);
+}
+@media(max-width:900px){ .fv2-grid{ grid-template-columns: repeat(2,1fr); } }
+@media(max-width:560px){ .fv2-grid{ grid-template-columns: 1fr; } }
+
+
+/* ===== WHY US V2 ===== */
+.why-v2 {
+  background: #ffffff;
+  padding: 110px 0 100px;
+  position: relative; overflow: hidden;
+}
+.why-v2-bg-deco { position: absolute; inset: 0; pointer-events: none; z-index: 0; }
+.wv2-dot {
+  position: absolute; border-radius: 50%; opacity: 0.4;
+  animation: wv2DotBob 5s ease-in-out infinite;
+}
+@keyframes wv2DotBob {
+  0%,100%{ transform: translateY(0) scale(1); }
+  50%    { transform: translateY(-16px) scale(1.15); }
+}
+.wv2-wrap {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+  position: relative; z-index: 1;
+}
+
+/* Image */
+.wv2-img-col { position: relative; }
+.wv2-img-frame {
+  position: relative; border-radius: 32px; overflow: visible;
+}
+.wv2-img-main {
+  width: 100%; border-radius: 28px;
+  box-shadow: 0 24px 64px rgba(30,144,255,0.18), 0 8px 24px rgba(0,0,0,0.1);
+  transition: transform 0.6s ease;
+  display: block;
+}
+.wv2-img-col:hover .wv2-img-main { transform: scale(1.02) translateY(-4px); }
+.wv2-img-accent {
+  position: absolute; inset: -10px;
+  border: 3px solid #1E90FF; border-radius: 36px;
+  opacity: 0.2; pointer-events: none;
+}
+.wv2-satisfaction {
+  position: absolute; bottom: -20px; right: -20px;
+  background: #FF8C00; border-radius: 20px;
+  padding: 16px 20px; text-align: center;
+  box-shadow: 0 8px 28px rgba(255,140,0,0.4);
+  border: 3px solid #fff;
+}
+.wv2-sat-num { display: block; font-family: 'Fredoka One',cursive; font-size: 2rem; color: #fff; line-height: 1; }
+.wv2-sat-txt { display: block; font-size: 0.72rem; font-weight: 800; color: rgba(255,255,255,0.9); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 4px; }
+.wv2-img-badge-tl {
+  position: absolute; top: -16px; left: 20px;
+  background: #FFD700; color: #111;
+  font-family: 'Fredoka One',cursive; font-size: 0.82rem;
+  padding: 6px 16px; border-radius: 50px;
+  box-shadow: 0 4px 14px rgba(255,215,0,0.4);
+  border: 2px solid #fff;
+}
+
+/* Text */
+.wv2-trust-cluster {
+  display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 8px;
+}
+.wv2-tick {
+  background: #EBF5FF; color: #1E90FF;
+  font-size: 0.78rem; font-weight: 800;
+  padding: 5px 14px; border-radius: 50px;
+  border: 1px solid rgba(30,144,255,0.25);
+}
+.wv2-headline {
+  font-family: 'Fredoka One',cursive;
+  font-size: clamp(2.2rem,4vw,3.2rem);
+  color: #142D5F; margin: 12px 0 16px; line-height: 1.1;
+}
+.wv2-intro { font-size: 1.05rem; color: #444; line-height: 1.8; margin-bottom: 28px; }
+
+/* Feature cards */
+.wv2-features { display: flex; flex-direction: column; gap: 14px; margin-bottom: 32px; }
+.wv2-feat {
+  display: flex; align-items: flex-start; gap: 16px;
+  background: #ffffff; border: 1.5px solid rgba(30,144,255,0.12);
+  border-radius: 16px; padding: 16px 18px;
+  box-shadow: 0 3px 14px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.wv2-feat:hover {
+  transform: translateX(6px);
+  box-shadow: 0 6px 24px rgba(30,144,255,0.14);
+  border-color: rgba(30,144,255,0.3);
+}
+.wv2-feat-icon {
+  width: 46px; height: 46px; border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.4rem; flex-shrink: 0;
+}
+.wv2-feat strong { display: block; font-size: 0.97rem; color: #142D5F; font-weight: 800; margin-bottom: 3px; }
+.wv2-feat p { font-size: 0.87rem; color: #555; line-height: 1.6; margin: 0; }
+
+.wv2-cta-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #1E90FF, #2ECC40);
+  color: #fff; font-family: 'Fredoka One',cursive;
+  font-size: 1.05rem; padding: 14px 36px;
+  border-radius: 50px;
+  box-shadow: 0 6px 24px rgba(30,144,255,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.wv2-cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 36px rgba(30,144,255,0.4);
+}
+@media(max-width:860px){
+  .wv2-wrap { grid-template-columns: 1fr; gap: 48px; }
+  .wv2-img-col { max-width: 520px; margin: 0 auto; }
+}

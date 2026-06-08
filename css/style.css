@@ -2726,8 +2726,8 @@ section:not(.services-strip) .strip-item:hover {
 
 /* ===== REMEDY REX LOGO ===== */
 .nav-logo-img {
-  width: 58px;
-  height: 58px;
+  width: 73px;
+  height: 73px;
   object-fit: contain;
   border-radius: 50%;
   transition: transform 0.3s ease;

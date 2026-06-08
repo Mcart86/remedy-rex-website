@@ -14,10 +14,7 @@
 
   <header class="navbar scrolled" id="navbar">
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo">
-        
-        <span>Remedy Rex</span>
-      </a>
+      <a href="index.html" class="nav-logo"><span>Remedy Rex</span></a>
       <nav class="nav-links">
         <a href="index.html">Home</a>
         <a href="about.html">About Us</a>
@@ -35,7 +32,6 @@
 
   <section class="page-hero">
     <div class="hero-bg"></div>
-    <div class="hero-grid-overlay"></div>
     <div class="page-hero-inner">
       <div class="section-tag">Everything We Offer</div>
       <h1>What We Offer</h1>
@@ -43,118 +39,178 @@
     </div>
     <div class="page-hero-wave">
       <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-        <path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="var(--off-white)"/>
+        <path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#ffffff"/>
       </svg>
     </div>
   </section>
 
-  <section class="section-pad" style="background:var(--off-white);">
+  <!-- TRUST STRIP -->
+  <section class="inv-trust-strip">
+    <div class="container">
+      <div class="inv-trust-grid">
+        <div class="inv-trust-card"><span class="inv-trust-icon">🛡</span><div><strong>Fully Insured</strong><p>Your safety is our top priority</p></div></div>
+        <div class="inv-trust-card"><span class="inv-trust-icon">🚚</span><div><strong>Delivery &amp; Setup Included</strong><p>We handle everything start to finish</p></div></div>
+        <div class="inv-trust-card"><span class="inv-trust-icon">⭐</span><div><strong>500+ Happy Families</strong><p>Trusted across South Jersey</p></div></div>
+        <div class="inv-trust-card"><span class="inv-trust-icon">🎪</span><div><strong>Serving South Jersey</strong><p>Gloucester Township &amp; surrounding areas</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STICKY CATEGORY NAV -->
+  <nav class="cat-nav" id="catNav">
+    <div class="container">
+      <div class="cat-nav-inner">
+        <a href="#bounce-houses"    class="cat-nav-link active" data-section="bounce-houses">🏰 Bounce Houses</a>
+        <a href="#obstacle-courses" class="cat-nav-link" data-section="obstacle-courses">🏃 Obstacle Courses</a>
+        <a href="#games"            class="cat-nav-link" data-section="games">🎯 Games &amp; Activities</a>
+        <a href="#tents"            class="cat-nav-link" data-section="tents">🎪 Tents, Tables &amp; Chairs</a>
+        <a href="#event-extras"     class="cat-nav-link" data-section="event-extras">✨ Event Extras</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- CATALOG -->
+  <section class="inv-catalog">
     <div class="container">
 
       <!-- BOUNCE HOUSES -->
-      <div class="inv-category reveal"><h2>🏠 Bounce Houses &amp; Inflatables</h2></div>
-      <div class="inventory-grid">
-        <div class="rental-card">
-          <div class="card-img-wrap"><img src="images/jungle-bounce-house-v2.jpg" alt="Jungle Bounce House"/><span class="card-badge">💧 Water Capable</span></div>
-          <div class="card-body"><h3>Jungle Bounce House w/ Slide</h3><p>19ft × 18.5ft × 13ft. Vibrant jungle oasis — water capable for summer fun!</p><div class="card-footer"><span class="card-tag">🌿 Fan Favorite</span><a href="contact.html" class="btn btn-card">Book Now</a></div></div>
+      <div class="inv-cat-header reveal" id="bounce-houses">
+        <h2>🏰 Bounce Houses &amp; Inflatables</h2>
+        <p>Bring excitement to birthdays, school events, festivals, and backyard celebrations with our most popular inflatable attractions.</p>
+      </div>
+      <div class="inv-grid inv-grid-3">
+        <div class="inv-card reveal delay-1">
+          <div class="inv-img-wrap"><img src="images/jungle-bounce-house-v2.jpg" alt="Jungle Bounce House"/><div class="inv-img-overlay"></div><span class="inv-badge inv-badge-blue">💧 Water Capable</span></div>
+          <div class="inv-body"><span class="inv-cat-label">🌿 Fan Favorite</span><h3>Jungle Bounce House w/ Slide</h3><p>19ft × 18.5ft × 13ft. Vibrant jungle oasis — water capable for summer fun!</p><a href="contact.html" class="inv-btn">Check Availability →</a></div>
         </div>
-        <div class="rental-card">
-          <div class="card-img-wrap"><img src="images/combo-bounce-house-v2.jpg" alt="Combo"/><span class="card-badge">⭐ Best Seller</span></div>
-          <div class="card-body"><h3>Combo Bounce House w/ Curved Slide</h3><p>27ft × 18ft × 17ft. The ultimate combo for parties &amp; festivals of any size.</p><div class="card-footer"><span class="card-tag">🎂 Birthdays</span><a href="contact.html" class="btn btn-card">Book Now</a></div></div>
+        <div class="inv-card reveal delay-2">
+          <div class="inv-img-wrap"><img src="images/combo-bounce-house-v2.jpg" alt="Combo Bounce House"/><div class="inv-img-overlay"></div><span class="inv-badge inv-badge-orange">⭐ Best Seller</span></div>
+          <div class="inv-body"><span class="inv-cat-label">🎂 Birthdays</span><h3>Combo Bounce House w/ Curved Slide</h3><p>27ft × 18ft × 17ft. The ultimate combo for parties &amp; festivals of any size.</p><a href="contact.html" class="inv-btn">Check Availability →</a></div>
         </div>
-        <div class="rental-card">
-          <div class="card-img-wrap"><img src="images/castle-bounce-house-v2.jpg" alt="Castle"/><span class="card-badge">👑 Royal Fun</span></div>
-          <div class="card-body"><h3>Castle Bounce House w/ Slide</h3><p>24ft × 11ft × 14ft. Royal adventure for little ones — imagination guaranteed!</p><div class="card-footer"><span class="card-tag">👸 Kids Fave</span><a href="contact.html" class="btn btn-card">Book Now</a></div></div>
+        <div class="inv-card reveal delay-3">
+          <div class="inv-img-wrap"><img src="images/castle-bounce-house-v2.jpg" alt="Castle Bounce House"/><div class="inv-img-overlay"></div><span class="inv-badge inv-badge-yellow">👑 Royal Fun</span></div>
+          <div class="inv-body"><span class="inv-cat-label">👸 Kids Fave</span><h3>Castle Bounce House w/ Slide</h3><p>24ft × 11ft × 14ft. Royal adventure for little ones — imagination guaranteed!</p><a href="contact.html" class="inv-btn">Check Availability →</a></div>
         </div>
-        <div class="rental-card">
-          <div class="card-img-wrap"><img src="images/halloween-bounce-house.avif" alt="Halloween Bounce House"/><span class="card-badge">🎃 Seasonal</span></div>
-          <div class="card-body"><h3>Halloween Bounce House</h3><p>Spooky fun for Halloween parties and fall festivals — frighteningly good time!</p><div class="card-footer"><span class="card-tag">🍂 Fall Events</span><a href="contact.html" class="btn btn-card">Book Now</a></div></div>
+        <div class="inv-card reveal delay-1">
+          <div class="inv-img-wrap"><img src="images/halloween-bounce-house.avif" alt="Halloween Bounce House"/><div class="inv-img-overlay"></div><span class="inv-badge inv-badge-red">🎃 Seasonal</span></div>
+          <div class="inv-body"><span class="inv-cat-label">🍂 Fall Events</span><h3>Halloween Bounce House</h3><p>Spooky fun for Halloween parties and fall festivals — frighteningly good time!</p><a href="contact.html" class="inv-btn">Check Availability →</a></div>
         </div>
-        <div class="rental-card">
-          <div class="card-img-wrap"><img src="images/inflatable-ball-pit.png" alt="Inflatable Ball Pit with Balls"/><span class="card-badge">🎱 Party Fave</span></div>
-          <div class="card-body"><h3>Inflatable Ball Pit w/ Balls</h3><p>Full inflatable ball pit — endless fun and a crowd-pleaser for little ones!</p><div class="card-footer"><span class="card-tag">👶 Little Ones</span><a href="contact.html" class="btn btn-card">Book Now</a></div></div>
+        <div class="inv-card reveal delay-2">
+          <div class="inv-img-wrap"><img src="images/inflatable-ball-pit.png" alt="Inflatable Ball Pit"/><div class="inv-img-overlay"></div><span class="inv-badge inv-badge-green">🎱 Party Fave</span></div>
+          <div class="inv-body"><span class="inv-cat-label">👶 Little Ones</span><h3>Inflatable Ball Pit w/ Balls</h3><p>Full inflatable ball pit — endless fun and a crowd-pleaser for little ones!</p><a href="contact.html" class="inv-btn">Check Availability →</a></div>
         </div>
-        <div class="rental-card">
-          <div class="card-img-wrap"><img src="images/sofa-pool-blowup.png" alt="Sofa Pool Blow Up Combo"/><span class="card-badge">💦 Summer Fun</span></div>
-          <div class="card-body"><h3>Sofa-Pool Blow Up Combo</h3><p>Inflate, relax, and splash! Perfect for summer backyard parties.</p><div class="card-footer"><span class="card-tag">☀️ Summer</span><a href="contact.html" class="btn btn-card">Book Now</a></div></div>
+        <div class="inv-card reveal delay-3">
+          <div class="inv-img-wrap"><img src="images/sofa-pool-blowup.png" alt="Sofa Pool Combo"/><div class="inv-img-overlay"></div><span class="inv-badge inv-badge-blue">💦 Summer Fun</span></div>
+          <div class="inv-body"><span class="inv-cat-label">☀️ Summer</span><h3>Sofa-Pool Blow Up Combo</h3><p>Inflate, relax, and splash! Perfect for summer backyard parties.</p><a href="contact.html" class="inv-btn">Check Availability →</a></div>
         </div>
       </div>
 
-
-
-      <!-- OBSTACLE & SPECIAL -->
-      <div class="inv-category reveal" style="margin-top:60px;"><h2>🏃 Obstacle Courses &amp; Special Attractions</h2></div>
-      <div class="inventory-grid">
-        <div class="rental-card">
-          <div class="card-img-wrap"><img src="https://static.wixstatic.com/media/8d967a_6dedd7dafd3c4170939bd08f801cb075~mv2.png/v1/fill/w_500,h_340,al_c,q_85,enc_avif,quality_auto/OBSTACLE%202.png" alt="Obstacle"/><span class="card-badge">🏆 High Energy</span></div>
-          <div class="card-body"><h3>Obstacle Course Rental</h3><p>High-energy inflatable obstacle courses — perfect for schools, festivals &amp; competitions.</p><div class="card-footer"><span class="card-tag">🏫 Schools</span><a href="contact.html" class="btn btn-card">Book Now</a></div></div>
+      <!-- OBSTACLE COURSES -->
+      <div class="inv-cat-header reveal" id="obstacle-courses">
+        <h2>🏃 Obstacle Courses &amp; Special Attractions</h2>
+        <p>High-energy inflatable experiences built for competition, team events, school field days, and unforgettable celebrations.</p>
+      </div>
+      <div class="inv-grid inv-grid-4">
+        <div class="inv-card reveal delay-1">
+          <div class="inv-img-wrap"><img src="images/combo-bounce-house-v2.jpg" alt="Obstacle Course"/><div class="inv-img-overlay"></div><span class="inv-badge inv-badge-red">🏆 High Energy</span></div>
+          <div class="inv-body"><span class="inv-cat-label">🏫 Schools</span><h3>Obstacle Course Rental</h3><p>High-energy inflatable obstacle courses — perfect for schools, festivals &amp; competitions.</p><a href="contact.html" class="inv-btn">Reserve This →</a></div>
         </div>
-        <div class="rental-card">
-          <div class="card-img-wrap"><img src="https://static.wixstatic.com/media/8d967a_e5e574abf13f42168f11b6d2ffb44333~mv2.png/v1/fill/w_500,h_340,al_c,q_90,enc_avif,quality_auto/Glow-in-the-dark%20miniature%20golf%20experience.png" alt="Glow Golf"/><span class="card-badge">✨ Glow Experience</span></div>
-          <div class="card-body"><h3>Mobile Miniature Glow Golf</h3><p>4 or 9 hole glow courses — day or night. Perfect for corporate events &amp; fundraisers.</p><div class="card-footer"><span class="card-tag">🌙 Day or Night</span><a href="contact.html" class="btn btn-card">Book Now</a></div></div>
+        <div class="inv-card reveal delay-2">
+          <div class="inv-img-wrap"><img src="images/glow-golf.png" alt="Glow Golf"/><div class="inv-img-overlay"></div><span class="inv-badge inv-badge-yellow">✨ Glow Experience</span></div>
+          <div class="inv-body"><span class="inv-cat-label">🌙 Day or Night</span><h3>Mobile Miniature Glow Golf</h3><p>4 or 9 hole glow courses — day or night. Perfect for corporate events &amp; fundraisers.</p><a href="contact.html" class="inv-btn">Reserve This →</a></div>
         </div>
-        <div class="rental-card">
-          <div class="card-img-wrap"><img src="images/projector-blowup.png" alt="Outdoor/Indoor Projector Blow Up"/><span class="card-badge">🎬 Movie Night</span></div>
-          <div class="card-body"><h3>Outdoor/Indoor Projector Blow Up</h3><p>Inflatable projector screen for outdoor movie nights and special screenings.</p><div class="card-footer"><span class="card-tag">🌟 Unique</span><a href="contact.html" class="btn btn-card">Book Now</a></div></div>
+        <div class="inv-card reveal delay-3">
+          <div class="inv-img-wrap"><img src="images/projector-blowup.png" alt="Projector Screen"/><div class="inv-img-overlay"></div><span class="inv-badge inv-badge-blue">🎬 Movie Night</span></div>
+          <div class="inv-body"><span class="inv-cat-label">🌟 Unique</span><h3>Outdoor/Indoor Projector Blow Up</h3><p>Inflatable projector screen for outdoor movie nights and special screenings.</p><a href="contact.html" class="inv-btn">Reserve This →</a></div>
         </div>
-        <div class="rental-card">
-          <div class="card-img-wrap"><img src="images/basketball-court.png" alt="U-Ball Basketball Travelling Court"/><span class="card-badge">🏀 Sports</span></div>
-          <div class="card-body"><h3>B-Ball Basketball Travelling Court</h3><p>Portable basketball court with hoops for events, leagues, tournaments, and parties.</p><div class="card-footer"><span class="card-tag">🏆 Competitive</span><a href="contact.html" class="btn btn-card">Book Now</a></div></div>
+        <div class="inv-card reveal delay-4">
+          <div class="inv-img-wrap"><img src="images/basketball-court.png" alt="Basketball Court"/><div class="inv-img-overlay"></div><span class="inv-badge inv-badge-orange">🏀 Sports</span></div>
+          <div class="inv-body"><span class="inv-cat-label">🏆 Competitive</span><h3>B-Ball Basketball Travelling Court</h3><p>Portable basketball court for events, leagues, tournaments, and parties.</p><a href="contact.html" class="inv-btn">Reserve This →</a></div>
         </div>
       </div>
 
       <!-- GAMES -->
-      <div class="inv-category reveal" style="margin-top:60px;"><h2>🎮 Games &amp; Activities</h2></div>
-      <div class="inventory-grid">
-        <div class="rental-card">
-          <div class="card-img-wrap"><img src="https://static.wixstatic.com/media/8d967a_f2c9edc90bb0454bb7ed697466e96192~mv2.jpg/v1/crop/x_0,y_32,w_933,h_933/fill/w_500,h_340,al_c,q_80,enc_avif,quality_auto/axe%201.jpg" alt="Axe Darts"/><span class="card-badge">🪓 Unique Fun</span></div>
-          <div class="card-body"><h3>Giant Inflatable Axe/Darts Throw</h3><p>Safe inflatable axe throwing &amp; oversized dart games — adults love this one!</p><div class="card-footer"><span class="card-tag">🎯 Adults</span><a href="contact.html" class="btn btn-card">Book Now</a></div></div>
+      <div class="inv-cat-header reveal" id="games">
+        <h2>🎯 Games &amp; Activities</h2>
+        <p>Keep guests of all ages entertained with our premium lawn games, party games, and interactive activity rentals.</p>
+      </div>
+      <div class="inv-grid inv-grid-4">
+        <div class="inv-card reveal delay-1">
+          <div class="inv-img-wrap"><img src="https://static.wixstatic.com/media/8d967a_f2c9edc90bb0454bb7ed697466e96192~mv2.jpg/v1/crop/x_0,y_32,w_933,h_933/fill/w_500,h_340,al_c,q_80,enc_avif,quality_auto/axe%201.jpg" alt="Axe Darts"/><div class="inv-img-overlay"></div><span class="inv-badge inv-badge-red">🪓 Unique Fun</span></div>
+          <div class="inv-body"><span class="inv-cat-label">🎯 Adults</span><h3>Giant Inflatable Axe/Darts Throw</h3><p>Safe inflatable axe throwing &amp; oversized dart games — adults love this one!</p><a href="contact.html" class="inv-btn">Reserve This Game →</a></div>
         </div>
-        <div class="rental-card">
-          <div class="card-img-wrap"><img src="images/giant-jenga.png" alt="Giant Jenga Set"/><span class="card-badge">🧱 Classic</span></div>
-          <div class="card-body"><h3>Giant Jenga Set Rental</h3><p>Oversized Jenga brings the classic game to life — great for all ages!</p><div class="card-footer"><span class="card-tag">👨‍👩‍👧 All Ages</span><a href="contact.html" class="btn btn-card">Book Now</a></div></div>
+        <div class="inv-card reveal delay-2">
+          <div class="inv-img-wrap"><img src="images/giant-jenga.png" alt="Giant Jenga"/><div class="inv-img-overlay"></div><span class="inv-badge inv-badge-green">🧱 Classic</span></div>
+          <div class="inv-body"><span class="inv-cat-label">👨‍👩‍👧 All Ages</span><h3>Giant Jenga Set Rental</h3><p>Oversized Jenga brings the classic game to life — great for all ages!</p><a href="contact.html" class="inv-btn">Reserve This Game →</a></div>
         </div>
-        <div class="rental-card">
-          <div class="card-img-wrap"><img src="images/cornhole.jpg" alt="Cornhole Rental"/><span class="card-badge">🎯 Lawn Game</span></div>
-          <div class="card-body"><h3>Corn Hole Rental</h3><p>Classic bean bag toss — a must-have addition for any outdoor party or event!</p><div class="card-footer"><span class="card-tag">🌿 Outdoor</span><a href="contact.html" class="btn btn-card">Book Now</a></div></div>
+        <div class="inv-card reveal delay-3">
+          <div class="inv-img-wrap"><img src="images/cornhole.jpg" alt="Cornhole"/><div class="inv-img-overlay"></div><span class="inv-badge inv-badge-orange">🎯 Lawn Game</span></div>
+          <div class="inv-body"><span class="inv-cat-label">🌿 Outdoor</span><h3>Corn Hole Rental</h3><p>Classic bean bag toss — a must-have addition for any outdoor party or event!</p><a href="contact.html" class="inv-btn">Reserve This Game →</a></div>
         </div>
-        <div class="rental-card">
-          <div class="card-img-wrap"><img src="images/putter-ball.png" alt="Golf Pong Game"/><span class="card-badge">⛳ Party Game</span></div>
-          <div class="card-body"><h3>Golf Pong Game</h3><p>Golf meets pong in this wildly popular party game everyone will love.</p><div class="card-footer"><span class="card-tag">🎉 Party</span><a href="contact.html" class="btn btn-card">Book Now</a></div></div>
+        <div class="inv-card reveal delay-4">
+          <div class="inv-img-wrap"><img src="images/putter-ball.png" alt="Golf Pong"/><div class="inv-img-overlay"></div><span class="inv-badge inv-badge-yellow">⛳ Party Game</span></div>
+          <div class="inv-body"><span class="inv-cat-label">🎉 Party</span><h3>Golf Pong Game</h3><p>Golf meets pong in this wildly popular party game everyone will love.</p><a href="contact.html" class="inv-btn">Reserve This Game →</a></div>
         </div>
-        <div class="rental-card">
-          <div class="card-img-wrap"><img src="images/kids-bean-bag-toss.png" alt="Kids Bean Bag Toss Game"/><span class="card-badge">👶 Kids Fun</span></div>
-          <div class="card-body"><h3>Kids Bean Bag Toss — Kids Cornhole</h3><p>Smaller kid-sized cornhole set — perfect for little ones ages 2-8!</p><div class="card-footer"><span class="card-tag">🐣 Toddlers</span><a href="contact.html" class="btn btn-card">Book Now</a></div></div>
+        <div class="inv-card reveal delay-1">
+          <div class="inv-img-wrap"><img src="images/kids-bean-bag-toss.png" alt="Kids Bean Bag Toss"/><div class="inv-img-overlay"></div><span class="inv-badge inv-badge-blue">👶 Kids Fun</span></div>
+          <div class="inv-body"><span class="inv-cat-label">🐣 Toddlers</span><h3>Kids Bean Bag Toss</h3><p>Kid-sized cornhole — perfect for little ones ages 2-8!</p><a href="contact.html" class="inv-btn">Reserve This Game →</a></div>
         </div>
-        <div class="rental-card">
-          <div class="card-img-wrap"><img src="images/giant-golf-darts.png" alt="Giant Golf Darts"/><span class="card-badge">🏌️ Giant Fun</span></div>
-          <div class="card-body"><h3>Giant Golf Darts (6ft+)</h3><p>Over 6ft tall golf dart board — comes with 10+ giant golf ball darts!</p><div class="card-footer"><span class="card-tag">😄 Crowd Pleaser</span><a href="contact.html" class="btn btn-card">Book Now</a></div></div>
+        <div class="inv-card reveal delay-2">
+          <div class="inv-img-wrap"><img src="images/giant-golf-darts.png" alt="Giant Golf Darts"/><div class="inv-img-overlay"></div><span class="inv-badge inv-badge-green">🏌️ Giant Fun</span></div>
+          <div class="inv-body"><span class="inv-cat-label">😄 Crowd Pleaser</span><h3>Giant Golf Darts (6ft+)</h3><p>Over 6ft tall golf dart board — comes with 10+ giant golf ball darts!</p><a href="contact.html" class="inv-btn">Reserve This Game →</a></div>
         </div>
-        <div class="rental-card">
-          <div class="card-img-wrap"><img src="images/360-photo-booth.png" alt="360 Photo Booth"/><span class="card-badge">📸 Viral Worthy</span></div>
-          <div class="card-body"><h3>360 Photo Booth</h3><p>Elevate your event with our 360° photo booth rental — guests step on the platform and get a stunning spinning video to share instantly!</p><div class="card-footer"><span class="card-tag">🎬 Content Creator</span><a href="contact.html" class="btn btn-card">Book Now</a></div></div>
+        <div class="inv-card reveal delay-3">
+          <div class="inv-img-wrap"><img src="images/360-photo-booth.png" alt="360 Photo Booth"/><div class="inv-img-overlay"></div><span class="inv-badge inv-badge-red">📸 Viral Worthy</span></div>
+          <div class="inv-body"><span class="inv-cat-label">🎬 Content Creator</span><h3>360 Photo Booth</h3><p>360° spinning video — guests share instantly on social media!</p><a href="contact.html" class="inv-btn">Reserve This Game →</a></div>
+        </div>
+        <div class="inv-card reveal delay-4">
+          <div class="inv-img-wrap"><img src="images/football-toss.jpg" alt="Football Toss"/><div class="inv-img-overlay"></div><span class="inv-badge inv-badge-orange">🏈 Stadium Fun</span></div>
+          <div class="inv-body"><span class="inv-cat-label">🎯 All Ages</span><h3>Football Toss Challenge</h3><p>Giant inflatable football toss — perfect for tailgates, school events &amp; parties.</p><a href="contact.html" class="inv-btn">Reserve This Game →</a></div>
         </div>
       </div>
 
-      <!-- TENTS & FURNITURE -->
-      <div class="inv-category reveal" style="margin-top:60px;"><h2>⛺ Tents, Tables &amp; Chairs</h2></div>
-      <div class="inventory-grid">
-        <div class="rental-card">
-          <div class="card-img-wrap"><img src="images/tent-rental-v2.jpg" alt="Tent"/><span class="card-badge">⛺ All Surfaces</span></div>
-          <div class="card-body"><h3>Tent Rentals</h3><p>8×8, 10×10, 15×15, and 20×20 sizes. Works on all surfaces including parking lots.</p><div class="card-footer"><span class="card-tag">☀️ Rain or Shine</span><a href="contact.html" class="btn btn-card">Book Now</a></div></div>
+      <!-- TENTS -->
+      <div class="inv-cat-header reveal" id="tents">
+        <h2>🎪 Tents, Tables &amp; Chairs</h2>
+        <p>Complete your event setup with professional shade structures and seating — available for all surfaces, rain or shine.</p>
+      </div>
+      <div class="inv-grid inv-grid-3">
+        <div class="inv-card reveal delay-1">
+          <div class="inv-img-wrap"><img src="images/tent-rental-v2.jpg" alt="Tent Rental"/><div class="inv-img-overlay"></div><span class="inv-badge inv-badge-blue">⛺ All Surfaces</span></div>
+          <div class="inv-body"><span class="inv-cat-label">☀️ Rain or Shine</span><h3>Tent Rentals</h3><p>8×8 to 20×20 sizes — works on all surfaces including parking lots.</p><a href="contact.html" class="inv-btn">Request Setup →</a></div>
         </div>
-        <div class="rental-card">
-          <div class="card-img-wrap"><img src="https://static.wixstatic.com/media/8d967a_4ac7bc342e724593bf361b5d8aeece94~mv2.jpg/v1/crop/x_320,y_0,w_1280,h_1280/fill/w_500,h_340,al_c,q_80,enc_avif,quality_auto/TABLES%20AND%20CHAIRS.jpg" alt="Tables Chairs"/><span class="card-badge">🪑 Indoor/Outdoor</span></div>
-          <div class="card-body"><h3>Tables &amp; Chairs Rental</h3><p>Indoor and outdoor table &amp; chair packages in various styles and sizes.</p><div class="card-footer"><span class="card-tag">🍽️ Events</span><a href="contact.html" class="btn btn-card">Book Now</a></div></div>
+        <div class="inv-card reveal delay-2">
+          <div class="inv-img-wrap"><img src="https://static.wixstatic.com/media/8d967a_4ac7bc342e724593bf361b5d8aeece94~mv2.jpg/v1/crop/x_320,y_0,w_1280,h_1280/fill/w_500,h_340,al_c,q_80,enc_avif,quality_auto/TABLES%20AND%20CHAIRS.jpg" alt="Tables and Chairs"/><div class="inv-img-overlay"></div><span class="inv-badge inv-badge-green">🪑 Indoor/Outdoor</span></div>
+          <div class="inv-body"><span class="inv-cat-label">🍽️ Events</span><h3>Tables &amp; Chairs Rental</h3><p>Indoor and outdoor table &amp; chair packages in various styles and sizes.</p><a href="contact.html" class="inv-btn">Request Setup →</a></div>
         </div>
-        <div class="rental-card">
-          <div class="card-img-wrap"><img src="https://static.wixstatic.com/media/8d967a_4ac7bc342e724593bf361b5d8aeece94~mv2.jpg/v1/crop/x_320,y_0,w_1280,h_1280/fill/w_500,h_340,al_c,q_80,enc_avif,quality_auto/TABLES%20AND%20CHAIRS.jpg" alt="Outdoor Tables and Chairs"/><span class="card-badge">🌞 Outdoor</span></div>
-          <div class="card-body"><h3>Outdoor Table &amp; Chair Rental</h3><p>Durable outdoor-grade furniture perfect for backyard events and festivals.</p><div class="card-footer"><span class="card-tag">🏕️ Outdoors</span><a href="contact.html" class="btn btn-card">Book Now</a></div></div>
+        <div class="inv-card reveal delay-3">
+          <div class="inv-img-wrap"><img src="images/specialty-linens.png" alt="Specialty Linens"/><div class="inv-img-overlay"></div><span class="inv-badge inv-badge-yellow">✨ Premium</span></div>
+          <div class="inv-body"><span class="inv-cat-label">🎨 Décor</span><h3>Specialty Linens</h3><p>Premium specialty linens in a variety of colors and styles to elevate your table setup.</p><a href="contact.html" class="inv-btn">Request Setup →</a></div>
         </div>
       </div>
 
-      <div class="section-cta reveal">
-        <p style="font-size:1.1rem;color:var(--text-mid);margin-bottom:20px;">Don't see what you're looking for? We have even more available — contact us!</p>
+      <!-- EVENT EXTRAS -->
+      <div class="inv-cat-header reveal" id="event-extras">
+        <h2>✨ Event Extras</h2>
+        <p>The finishing touches that transform a good party into an unforgettable event experience.</p>
+      </div>
+      <div class="inv-grid inv-grid-3">
+        <div class="inv-card reveal delay-1">
+          <div class="inv-img-wrap"><img src="images/marquee-letters.png" alt="Marquee Letters"/><div class="inv-img-overlay"></div><span class="inv-badge inv-badge-yellow">💡 Statement Piece</span></div>
+          <div class="inv-body"><span class="inv-cat-label">✨ Décor</span><h3>Marquee Letter Rentals</h3><p>Light-up marquee letters and numbers — make a bold statement at any event!</p><a href="contact.html" class="inv-btn">Learn More →</a></div>
+        </div>
+        <div class="inv-card reveal delay-2">
+          <div class="inv-img-wrap"><img src="images/backdrop-photo-wall.png" alt="Backdrop Photo Wall"/><div class="inv-img-overlay"></div><span class="inv-badge inv-badge-red">📸 Photo Ready</span></div>
+          <div class="inv-body"><span class="inv-cat-label">🎨 Décor</span><h3>Backdrop Photo Wall</h3><p>Professional backdrop walls perfect for photo ops and social sharing moments.</p><a href="contact.html" class="inv-btn">Learn More →</a></div>
+        </div>
+        <div class="inv-card reveal delay-3">
+          <div class="inv-img-wrap"><img src="images/projector-blowup.png" alt="Generator Rental"/><div class="inv-img-overlay"></div><span class="inv-badge inv-badge-orange">⚡ Power Up</span></div>
+          <div class="inv-body"><span class="inv-cat-label">🔌 Essential</span><h3>Generator Rentals</h3><p>Reliable generator rentals to power inflatables anywhere — no outlet needed.</p><a href="contact.html" class="inv-btn">Learn More →</a></div>
+        </div>
+      </div>
+
+      <div class="section-cta reveal" style="margin-top:60px;">
+        <p style="font-size:1.1rem;color:#555;margin-bottom:20px;">Don't see what you're looking for? We have even more available — just ask!</p>
         <a href="contact.html" class="btn btn-primary">Contact Us for Full Availability →</a>
       </div>
 
@@ -188,7 +244,6 @@
         <div class="footer-social">
           <a href="https://www.instagram.com/remedy_entertainment1/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
           <a href="https://www.facebook.com/profile.php?id=61577245432966" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
-          <a href="https://www.tiktok.com/@remedy_entertainment1" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
         </div>
       </div>
       <div class="footer-col"><h4>Quick Links</h4><a href="index.html">Home</a><a href="about.html">About Us</a><a href="inventory.html">What We Offer</a><a href="contact.html">Contact</a><a href="contact.html">Get a Quote</a></div>
@@ -199,7 +254,7 @@
       </div>
     </div></div></div>
     <div style="border-top:1px solid rgba(255,255,255,0.08);padding:32px 0;text-align:center;">
-      <p style="color:#111111;font-size:0.8rem;text-transform:uppercase;letter-spacing:2px;margin-bottom:16px;">A Division of</p>
+      <p style="color:rgba(255,255,255,0.5);font-size:0.8rem;text-transform:uppercase;letter-spacing:2px;margin-bottom:16px;">A Division of</p>
       <a href="https://www.remedyent.com" target="_blank" rel="noopener">
         <img src="images/remedy-entertainment-logo.png" alt="Remedy Entertainment" style="width:120px;height:120px;object-fit:contain;opacity:0.85;transition:opacity 0.3s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.85"/>
       </a>
@@ -210,23 +265,17 @@
 
   <script src="js/main.js"></script>
   <script>
-    // Sticky category nav active state on scroll
     const catLinks = document.querySelectorAll('.cat-nav-link');
     const sections = ['bounce-houses','obstacle-courses','games','tents','event-extras'];
     function updateActiveNav() {
       let current = sections[0];
       sections.forEach(id => {
         const el = document.getElementById(id);
-        if (el && window.scrollY >= el.getBoundingClientRect().top + window.scrollY - 160) {
-          current = id;
-        }
+        if (el && window.scrollY >= el.getBoundingClientRect().top + window.scrollY - 180) current = id;
       });
-      catLinks.forEach(link => {
-        link.classList.toggle('active', link.dataset.section === current);
-      });
+      catLinks.forEach(l => l.classList.toggle('active', l.dataset.section === current));
     }
     window.addEventListener('scroll', updateActiveNav, { passive: true });
-    // Smooth scroll
     catLinks.forEach(link => {
       link.addEventListener('click', e => {
         e.preventDefault();

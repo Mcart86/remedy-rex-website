@@ -683,9 +683,9 @@ a { text-decoration: none; color: inherit; }
   background: #ffffff; border: 1px solid rgba(0,0,0,0.08);
   border-radius: var(--radius); padding: 24px; margin-bottom: 16px;
 }
-.footer-contact-card h4 { font-family: 'Fredoka One', cursive; color: #ffffff; font-size: 1.1rem; margin-bottom: 14px; }
-.footer-contact-row { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; font-size: 0.92rem; }
-.footer-contact-row a { color: var(--blue); transition: color var(--t); }
+.footer-contact-card h4 { font-family: 'Fredoka One', cursive; color: #142D5F; font-size: 1.1rem; margin-bottom: 14px; }
+.footer-contact-row { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; font-size: 0.92rem; color: #444; }
+.footer-contact-row a { color: #1E90FF; transition: color var(--t); }
 .footer-contact-row a:hover { color: var(--yellow); }
 .footer-cta-btn {
   display: block; background: var(--orange); color: #ffffff;

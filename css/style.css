@@ -2838,3 +2838,20 @@ section:not(.services-strip) .strip-item:hover {
 @media(max-width:580px) {
   .checkbox-grid { grid-template-columns: 1fr; }
 }
+
+/* ===== NAV LOGO SUBTEXT ===== */
+.nav-logo {
+  display: flex !important;
+  flex-direction: column;
+  line-height: 1;
+  gap: 3px;
+}
+.nav-logo-sub {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  white-space: nowrap;
+}

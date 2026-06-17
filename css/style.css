@@ -350,7 +350,7 @@ a { text-decoration: none; color: inherit; }
   box-shadow: 0 4px 20px rgba(0,0,0,0.05);
 }
 .stats-grid {
-  display: grid; grid-template-columns: 320px repeat(4, 1fr);
+  display: grid; grid-template-columns: 260px repeat(4, 1fr);
   gap: 0;
   align-items: center;
 }
@@ -365,7 +365,7 @@ a { text-decoration: none; color: inherit; }
   border-right: 1px solid rgba(0,0,0,0.08);
 }
 .stats-logo {
-  width: 304px; height: 304px;
+  width: 243px; height: 243px;
   object-fit: contain; border-radius: 12px;
 }
 .stat-item:last-child { border-right: none; }

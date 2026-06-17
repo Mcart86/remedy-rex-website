@@ -2793,14 +2793,35 @@ section:not(.services-strip) .strip-item:hover {
   transform: translateY(-1px);
 }
 .check-opt input[type="checkbox"] {
-  width: 18px; height: 18px;
-  accent-color: #1E90FF;
+  appearance: none;
+  -webkit-appearance: none;
+  width: 22px; height: 22px;
+  border: 2px solid rgba(30,144,255,0.35);
+  border-radius: 6px;
+  background: #fff;
   cursor: pointer; flex-shrink: 0;
+  transition: background 0.2s, border-color 0.2s;
+  position: relative;
+  display: flex; align-items: center; justify-content: center;
+}
+.check-opt input[type="checkbox"]:checked {
+  background: #1E90FF;
+  border-color: #1E90FF;
+}
+.check-opt input[type="checkbox"]:checked::after {
+  content: "";
+  display: block;
+  width: 5px; height: 9px;
+  border: 2.5px solid #ffffff;
+  border-top: none; border-left: none;
+  transform: rotate(45deg) translate(-1px, -1px);
+  position: absolute;
 }
 .check-opt:has(input:checked) {
   background: #EBF5FF;
   border-color: #1E90FF;
   box-shadow: 0 2px 10px rgba(30,144,255,0.15);
+  color: #1E90FF;
 }
 
 .sales-tax-note {

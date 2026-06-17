@@ -2855,3 +2855,16 @@ section:not(.services-strip) .strip-item:hover {
   letter-spacing: 0.8px;
   white-space: nowrap;
 }
+
+/* ===== FORM ERROR STATE ===== */
+.form-error {
+  background: #fff0f0;
+  border: 1px solid #ffcccc;
+  border-radius: 12px;
+  padding: 14px 18px;
+  margin-bottom: 16px;
+  color: #cc0000;
+  font-weight: 700;
+  display: none;
+}
+[data-fs-success]:not([style*="display:none"]) ~ form { display: none; }

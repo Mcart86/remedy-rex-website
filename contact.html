@@ -130,7 +130,9 @@
           </div><!-- RIGHT: FORM -->
         <div class="contact-form-wrap reveal-right">
           <h3>Request a Quote 🎉</h3>
-          <form id="quoteForm" action="https://formspree.io/f/mpqeejal" method="POST">
+          <div data-fs-success class="form-success" style="display:none;">✅ Thanks! We'll be in touch within 24 hours with your quote!</div>
+          <div data-fs-error class="form-error" style="display:none;background:#fff0f0;border:1px solid #ffcccc;border-radius:12px;padding:14px 18px;margin-bottom:16px;color:#cc0000;font-weight:700;"></div>
+          <form id="quoteForm">
             <input type="hidden" name="_subject" value="New Quote Request — Remedy Rex's"/>
             <div class="form-row">
               <div class="form-group"><label for="firstName">First Name *</label><input type="text" id="firstName" name="firstName" required placeholder="John"/></div>
@@ -206,8 +208,7 @@
             </div>
 
             <div class="form-group"><label for="message">Additional Details</label><textarea id="message" name="message" placeholder="Tell us more — any special requests, questions, or details we should know..."></textarea></div>
-            <button type="submit" class="btn btn-primary form-submit">Send My Quote Request →</button>
-            <div id="formSuccess" class="form-success">✅ Thanks! We'll be in touch within 24 hours with your quote!</div>
+            <button type="submit" class="btn btn-primary form-submit" data-fs-submit-btn>Send My Quote Request →</button>
           </form>
         </div>
 
@@ -239,6 +240,11 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script>
+    window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+    formspree('initForm', { formElement: '#quoteForm', formId: 'mpqeejal' });
+  </script>
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
   <script>
     // FAQ accordion
     document.querySelectorAll('.faq-q').forEach(btn => {

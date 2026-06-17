@@ -2888,8 +2888,9 @@ section:not(.services-strip) .strip-item:hover {
   .confetti-container { opacity: 0.4; }
   
   /* Stats bar */
-  .stat-logo-col { display: none !important; }
+  .stat-logo-col { grid-column: 1 / -1; display: flex !important; justify-content: center; padding: 0 0 16px; border-right: none !important; border-bottom: 1px solid rgba(0,0,0,0.08); margin-bottom: 8px; }
   .stats-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .stats-logo { width: 180px !important; height: 180px !important; }
   .stat-num { font-size: 2rem !important; }
   
   /* Nav */

@@ -77,11 +77,11 @@
       <div class="contact-grid">
 
         <!-- LEFT: FORM -->
-        <div class="contact-form-wrap reveal-right">
+        <div class="contact-form-wrap reveal">
           <h3>Request a Quote 🎉</h3>
           <div data-fs-success class="form-success" style="display:none;">✅ Thanks! We'll be in touch within 24 hours with your quote!</div>
-          <div data-fs-error class="form-error" style="display:none;background:#fff0f0;border:1px solid #ffcccc;border-radius:12px;padding:14px 18px;margin-bottom:16px;color:#cc0000;font-weight:700;"></div>
-          <form id="quoteForm">
+          <div data-fs-error class="form-error" style="display:none;"></div>
+                    <form id="quoteForm">
             <input type="hidden" name="_subject" value="New Quote Request — Remedy Rex's"/>
             <div class="form-row">
               <div class="form-group"><label for="firstName">First Name *</label><input type="text" id="firstName" name="firstName" required placeholder="John"/></div>
@@ -159,6 +159,7 @@
             <div class="form-group"><label for="message">Additional Details</label><textarea id="message" name="message" placeholder="Tell us more — any special requests, questions, or details we should know..."></textarea></div>
             <button type="submit" class="btn btn-primary form-submit" data-fs-submit-btn>Send My Quote Request →</button>
           </form>
+        </div>
 
         <!-- RIGHT: INFO -->
         <div class="contact-info-col reveal-right">
@@ -167,7 +168,6 @@
             <h2>We'd Love to Hear<br/>From You!</h2>
             <p>Whether you're planning a birthday party, school event, or community festival — we're here to make it amazing. Send us a message and we'll respond fast!</p>
           </div>
-
           <div class="reveal delay-1">
             <div class="contact-detail">
               <div class="contact-detail-icon">📧</div>
@@ -186,17 +186,14 @@
               <div><strong>Full Service</strong><span>Delivery, setup, and cleanup all included</span></div>
             </div>
           </div>
-
           <div class="trust-row reveal delay-2">
             <div class="trust-badge"><span>🏆</span>Family Owned</div>
             <div class="trust-badge"><span>✅</span>Fully Insured</div>
             <div class="trust-badge"><span>⭐</span>5-Star Rated</div>
             <div class="trust-badge"><span>💰</span>No Hidden Fees</div>
           </div>
-
-          <!-- SOCIAL -->
-          <div class="reveal delay-3" style="margin-top:40px;">
-            <h3 style="font-family:'Fredoka One',cursive;color:var(--navy);margin-bottom:16px;font-size:1.3rem;">Follow Us!</h3>
+          <div class="reveal delay-3" style="margin-top:32px;">
+            <h3 style="font-family:'Fredoka One',cursive;color:#142D5F;margin-bottom:16px;font-size:1.3rem;">Follow Us!</h3>
             <div style="display:flex;gap:12px;flex-wrap:wrap;">
               <a href="https://www.instagram.com/remedy_entertainment1/" target="_blank" rel="noopener" class="social-btn instagram" style="padding:12px 22px;font-size:0.9rem;">
                 <svg viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
@@ -211,13 +208,12 @@
                 TikTok
               </a>
             </div>
-          </div><!-- RIGHT: FORM -->
+          </div>
         </div>
 
       </div>
     </div>
   </section>
-
   <footer class="footer">
     <div class="footer-top"><div class="container"><div class="footer-grid">
       <div class="footer-brand">

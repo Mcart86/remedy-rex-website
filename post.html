@@ -47,14 +47,14 @@
   <meta property="og:type" content="website"/>
   <meta property="og:title" content="Blog Post | Remedy Rex's Bouncy House & Inflatables"/>
   <meta property="og:description" content="Read the latest tips, news and stories from Remedy Rex's Bouncy House & Inflatables in South Jersey."/>
-  <meta property="og:url" content="https://remedyrexbounce.com/post.html"/>
+  <meta property="og:url" content="https://remedyrexbounce.com/post"/>
   <meta property="og:image" content="https://remedyrexbounce.com/images/hero-main.jpg"/>
   <meta property="og:site_name" content="Remedy Rex's Bouncy House & Inflatables"/>
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:title" content="Blog Post | Remedy Rex's Bouncy House & Inflatables"/>
   <meta name="twitter:description" content="Read the latest tips, news and stories from Remedy Rex's Bouncy House & Inflatables in South Jersey."/>
   <meta name="twitter:image" content="https://remedyrexbounce.com/images/hero-main.jpg"/>
-  <link rel="canonical" href="https://remedyrexbounce.com/post.html"/>
+  <link rel="canonical" href="https://remedyrexbounce.com/post"/>
 </head>
 <body>
 
@@ -145,7 +145,7 @@
       if (ogImg && post.image) ogImg.setAttribute('content', 'https://remedyrexbounce.com/' + post.image.replace(/^\//, ''));
 
       const ogUrl = document.querySelector('meta[property="og:url"]');
-      if (ogUrl) ogUrl.setAttribute('content', 'https://remedyrexbounce.com/post.html?slug=' + slug);
+      if (ogUrl) ogUrl.setAttribute('content', 'https://remedyrexbounce.com/post?slug=' + slug);
 
       // Update Twitter tags
       const twTitle = document.querySelector('meta[name="twitter:title"]');
@@ -159,7 +159,7 @@
 
       // Update canonical
       const canonical = document.querySelector('link[rel="canonical"]');
-      if (canonical) canonical.setAttribute('href', 'https://remedyrexbounce.com/post.html?slug=' + slug);
+      if (canonical) canonical.setAttribute('href', 'https://remedyrexbounce.com/post?slug=' + slug);
 
       // Inject Article schema
       const existingSchema = document.getElementById('post-schema');
@@ -188,7 +188,7 @@
         },
         "mainEntityOfPage": {
           "@type": "WebPage",
-          "@id": "https://remedyrexbounce.com/post.html?slug=" + slug
+          "@id": "https://remedyrexbounce.com/post?slug=" + slug
         }
       });
       document.head.appendChild(schema);

@@ -9,31 +9,31 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://remedyrexbounce.com/inventory.html</loc>
+    <loc>https://remedyrexbounce.com/inventory</loc>
     <lastmod>2026-06-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://remedyrexbounce.com/contact.html</loc>
+    <loc>https://remedyrexbounce.com/contact</loc>
     <lastmod>2026-06-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://remedyrexbounce.com/about.html</loc>
+    <loc>https://remedyrexbounce.com/about</loc>
     <lastmod>2026-06-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://remedyrexbounce.com/faq.html</loc>
+    <loc>https://remedyrexbounce.com/faq</loc>
     <lastmod>2026-06-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://remedyrexbounce.com/blog.html</loc>
+    <loc>https://remedyrexbounce.com/blog</loc>
     <lastmod>2026-06-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -41,25 +41,25 @@
 
   <!-- Blog Posts -->
   <url>
-    <loc>https://remedyrexbounce.com/post.html?slug=more-than-just-fun-rentals</loc>
+    <loc>https://remedyrexbounce.com/post?slug=more-than-just-fun-rentals</loc>
     <lastmod>2026-05-10</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://remedyrexbounce.com/post.html?slug=expands-inventory-new-inflatable-attractions</loc>
+    <loc>https://remedyrexbounce.com/post?slug=expands-inventory-new-inflatable-attractions</loc>
     <lastmod>2026-03-13</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://remedyrexbounce.com/post.html?slug=revolutionizing-event-entertainment</loc>
+    <loc>https://remedyrexbounce.com/post?slug=revolutionizing-event-entertainment</loc>
     <lastmod>2025-12-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://remedyrexbounce.com/post.html?slug=elevating-the-game</loc>
+    <loc>https://remedyrexbounce.com/post?slug=elevating-the-game</loc>
     <lastmod>2025-06-06</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"/>
-  <meta name="description" content="Read the latest news, tips and stories from Remedy Rex's Bouncy House & Inflatables."/>
+  <meta name="description" content="Bounce house rental tips, event ideas, and party planning guides from Remedy Rex's Inflatables — serving Gloucester Township and South Jersey."/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <title>Blog Post | Remedy Rex's Bouncy House & Inflatables</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -88,7 +88,7 @@
   <footer class="footer">
     <div class="footer-top"><div class="container"><div class="footer-grid">
       <div class="footer-brand">
-        <img src="images/logo-main.png" alt="Remedy Rex Logo" class="footer-logo-img"/>
+        <img src="images/logo-main.png" alt="Remedy Rex Logo" class="footer-logo-img" loading="lazy"/>
         <h3>Remedy Rex's</h3>
         <p>Where fun meets affordability. Family-owned and operated in Glendora, Gloucester Township, NJ.</p>
         <div class="footer-social">
@@ -107,7 +107,7 @@
     <div style="border-top:1px solid rgba(255,255,255,0.08);padding:32px 0;text-align:center;">
       <p style="color:rgba(255,255,255,0.4);font-size:0.8rem;text-transform:uppercase;letter-spacing:2px;margin-bottom:16px;">A Division of</p>
       <a href="https://www.remedyent.com" target="_blank" rel="noopener">
-        <img src="images/remedy-entertainment-logo.png" alt="Remedy Entertainment" style="width:120px;height:120px;object-fit:contain;opacity:0.85;transition:opacity 0.3s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.85"/>
+        <img src="images/remedy-entertainment-logo.png" alt="Remedy Entertainment" style="width:120px;height:120px;object-fit:contain;opacity:0.85;transition:opacity 0.3s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=0.85" loading="lazy"/>
       </a>
     </div>
     <hr class="footer-divider"/>
@@ -160,6 +160,38 @@
       // Update canonical
       const canonical = document.querySelector('link[rel="canonical"]');
       if (canonical) canonical.setAttribute('href', 'https://remedyrexbounce.com/post.html?slug=' + slug);
+
+      // Inject Article schema
+      const existingSchema = document.getElementById('post-schema');
+      if (existingSchema) existingSchema.remove();
+      const schema = document.createElement('script');
+      schema.id = 'post-schema';
+      schema.type = 'application/ld+json';
+      schema.textContent = JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": post.title,
+        "description": post.excerpt || post.title,
+        "image": post.image ? 'https://remedyrexbounce.com/' + post.image.replace(/^\//, '') : 'https://remedyrexbounce.com/images/hero-main.jpg',
+        "datePublished": post.date,
+        "author": {
+          "@type": "Person",
+          "name": post.author || "Remedy Rex's Team"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Remedy Rex's Bouncy House & Inflatables",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://remedyrexbounce.com/images/remedy-ent-logo.png"
+          }
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://remedyrexbounce.com/post.html?slug=" + slug
+        }
+      });
+      document.head.appendChild(schema);
       const related = posts.filter(p => p.slug !== slug).slice(0, 3);
 
       document.getElementById('postContent').innerHTML = `
@@ -171,7 +203,7 @@
           <span>✍️ ${post.author}</span>
           <span>⏱ ${post.readTime}</span>
         </div>
-        <img src="${post.image}" alt="${post.title}" class="post-hero-img"/>
+        <img src="${post.image}" alt="${post.title}" class="post-hero-img" loading="lazy"/>
         <div class="post-body">${post.content}</div>
         <div class="post-cta-box">
           <h3>Ready to Book Your Event? 🎉</h3>

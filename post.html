@@ -127,7 +127,39 @@
         return;
       }
 
+      // Update title
       document.title = post.title + ' | Remedy Rex\'s';
+
+      // Update meta description
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) metaDesc.setAttribute('content', post.excerpt || post.title);
+
+      // Update OG tags
+      const ogTitle = document.querySelector('meta[property="og:title"]');
+      if (ogTitle) ogTitle.setAttribute('content', post.title + ' | Remedy Rex\'s Bouncy House & Inflatables');
+
+      const ogDesc = document.querySelector('meta[property="og:description"]');
+      if (ogDesc) ogDesc.setAttribute('content', post.excerpt || post.title);
+
+      const ogImg = document.querySelector('meta[property="og:image"]');
+      if (ogImg && post.image) ogImg.setAttribute('content', 'https://remedyrexbounce.com/' + post.image.replace(/^\//, ''));
+
+      const ogUrl = document.querySelector('meta[property="og:url"]');
+      if (ogUrl) ogUrl.setAttribute('content', 'https://remedyrexbounce.com/post.html?slug=' + slug);
+
+      // Update Twitter tags
+      const twTitle = document.querySelector('meta[name="twitter:title"]');
+      if (twTitle) twTitle.setAttribute('content', post.title + ' | Remedy Rex\'s Bouncy House & Inflatables');
+
+      const twDesc = document.querySelector('meta[name="twitter:description"]');
+      if (twDesc) twDesc.setAttribute('content', post.excerpt || post.title);
+
+      const twImg = document.querySelector('meta[name="twitter:image"]');
+      if (twImg && post.image) twImg.setAttribute('content', 'https://remedyrexbounce.com/' + post.image.replace(/^\//, ''));
+
+      // Update canonical
+      const canonical = document.querySelector('link[rel="canonical"]');
+      if (canonical) canonical.setAttribute('href', 'https://remedyrexbounce.com/post.html?slug=' + slug);
       const related = posts.filter(p => p.slug !== slug).slice(0, 3);
 
       document.getElementById('postContent').innerHTML = `

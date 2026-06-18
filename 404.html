@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Page Not Found | Remedy Rex's Bouncy House & Inflatables</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/css/style.css"/>
+  <style>
+    .err-page { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; background: linear-gradient(135deg, #1E90FF 0%, #142D5F 100%); padding: 40px 20px; }
+    .err-inner { max-width: 560px; }
+    .err-num { font-family: 'Fredoka One', cursive; font-size: clamp(6rem, 20vw, 10rem); color: #FFD700; line-height: 1; margin-bottom: 8px; text-shadow: 0 4px 24px rgba(0,0,0,0.3); }
+    .err-title { font-family: 'Fredoka One', cursive; font-size: clamp(1.8rem, 5vw, 2.8rem); color: #ffffff; margin-bottom: 16px; }
+    .err-sub { font-size: 1.05rem; color: rgba(255,255,255,0.8); line-height: 1.7; margin-bottom: 36px; }
+    .err-emoji { font-size: 4rem; margin-bottom: 16px; display: block; animation: bounce 2s ease-in-out infinite; }
+    @keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-16px)} }
+    .err-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .err-btn-primary { background: #FF8C00; color: #fff; font-family: 'Fredoka One',cursive; font-size: 1rem; padding: 14px 32px; border-radius: 50px; text-decoration: none; transition: transform 0.2s, background 0.2s; }
+    .err-btn-primary:hover { background: #FF4500; transform: translateY(-2px); }
+    .err-btn-outline { background: rgba(255,255,255,0.1); border: 2px solid rgba(255,255,255,0.5); color: #fff; font-family: 'Fredoka One',cursive; font-size: 1rem; padding: 14px 32px; border-radius: 50px; text-decoration: none; transition: background 0.2s; }
+    .err-btn-outline:hover { background: rgba(255,255,255,0.2); }
+  </style>
+</head>
+<body>
+  <div class="err-page">
+    <div class="err-inner">
+      <span class="err-emoji">🎈</span>
+      <div class="err-num">404</div>
+      <h1 class="err-title">Oops! This page bounced away.</h1>
+      <p class="err-sub">Looks like this page jumped off and didn't come back. Let's get you back to the party!</p>
+      <div class="err-btns">
+        <a href="/" class="err-btn-primary">🏠 Back to Home</a>
+        <a href="/inventory.html" class="err-btn-outline">View Rentals</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

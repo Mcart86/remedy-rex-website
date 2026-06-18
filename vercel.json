@@ -5,24 +5,43 @@
     {
       "source": "/images/(.*)",
       "headers": [
-        { "key": "Cache-Control", "value": "no-store, no-cache, must-revalidate, max-age=0" },
-        { "key": "Pragma", "value": "no-cache" },
-        { "key": "Expires", "value": "0" }
+        { "key": "Cache-Control", "value": "public, max-age=2592000, stale-while-revalidate=86400" }
+      ]
+    },
+    {
+      "source": "/css/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=2592000, stale-while-revalidate=86400" }
+      ]
+    },
+    {
+      "source": "/js/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=2592000, stale-while-revalidate=86400" }
       ]
     },
     {
       "source": "/(.*).html",
       "headers": [
-        { "key": "Cache-Control", "value": "no-store, no-cache, must-revalidate, max-age=0" },
-        { "key": "Pragma", "value": "no-cache" },
-        { "key": "Expires", "value": "0" }
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "X-XSS-Protection", "value": "1; mode=block" }
       ]
     }
   ],
   "rewrites": [
-    { "source": "/about", "destination": "/about.html" },
+    { "source": "/about",     "destination": "/about.html" },
     { "source": "/inventory", "destination": "/inventory.html" },
-    { "source": "/contact", "destination": "/contact.html" },
-    { "source": "/blog", "destination": "/blog.html" }
+    { "source": "/contact",   "destination": "/contact.html" },
+    { "source": "/blog",      "destination": "/blog.html" },
+    { "source": "/faq",       "destination": "/faq.html" }
+  ],
+  "redirects": [
+    { "source": "/faq.html",       "destination": "/faq",       "permanent": true },
+    { "source": "/about.html",     "destination": "/about",     "permanent": true },
+    { "source": "/inventory.html", "destination": "/inventory", "permanent": true },
+    { "source": "/contact.html",   "destination": "/contact",   "permanent": true },
+    { "source": "/blog.html",      "destination": "/blog",      "permanent": true }
   ]
 }

@@ -2478,11 +2478,9 @@ section:not(.services-strip) .strip-item:hover {
   box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
 .cat-nav-inner {
-  display: flex; gap: 4px; padding: 0 8px;
-  overflow-x: auto; -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
+  display: flex; flex-wrap: wrap; justify-content: center;
+  gap: 4px; padding: 4px 8px;
 }
-.cat-nav-inner::-webkit-scrollbar { display: none; }
 .cat-nav-link {
   display: inline-flex; align-items: center; gap: 6px;
   padding: 14px 20px; white-space: nowrap;

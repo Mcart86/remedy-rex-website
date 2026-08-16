@@ -2517,6 +2517,27 @@ section:not(.services-strip) .strip-item:hover {
   font-size: 1rem; color: #555; line-height: 1.7; max-width: 640px;
 }
 
+/* SUBCATEGORY HEADER (nested within a category, e.g. Water Slides under Bounce Houses) */
+.inv-subcat-header {
+  margin: 48px 0 28px;
+  display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+}
+.inv-subcat-header h3 {
+  font-family: 'Fredoka One', cursive;
+  font-size: clamp(1.3rem, 2.5vw, 1.6rem);
+  color: #142D5F; margin: 0;
+}
+.inv-subcat-header p {
+  font-size: 0.95rem; color: #555; line-height: 1.6; max-width: 640px;
+  width: 100%; margin-top: 4px;
+}
+.inv-new-tag {
+  display: inline-block; background: #FF8C00; color: #fff;
+  font-family: 'Nunito', sans-serif; font-weight: 800; font-size: 0.7rem;
+  letter-spacing: 0.5px; text-transform: uppercase;
+  padding: 4px 10px; border-radius: 20px;
+}
+
 /* INVENTORY GRIDS */
 .inv-grid { display: grid; gap: 24px; }
 .inv-grid-3 { grid-template-columns: repeat(3,1fr); }

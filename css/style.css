@@ -2578,6 +2578,13 @@ section:not(.services-strip) .strip-item:hover {
   background: linear-gradient(to top, rgba(20,45,95,0.45) 0%, transparent 55%);
 }
 
+/* Equipment/product shots (e.g. Concessions) — show full item, no crop */
+.inv-img-wrap.product-shot { background: #fff; }
+.inv-img-wrap.product-shot img {
+  object-fit: contain; padding: 14px;
+}
+.inv-img-wrap.product-shot .inv-img-overlay { display: none; }
+
 /* Badges */
 .inv-badge {
   position: absolute; top: 12px; left: 12px;

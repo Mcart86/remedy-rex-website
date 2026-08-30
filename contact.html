@@ -270,23 +270,7 @@
   <script src="js/main.js"></script>
   <script>
     window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
-    formspree('initForm', {
-      formElement: '#quoteForm',
-      formId: 'mpqeejal',
-      onSuccess: function () {
-        const form = document.getElementById('quoteForm');
-        const success = document.getElementById('formSuccess');
-        if (form) form.reset();
-        if (success) {
-          success.style.display = 'block';
-          success.scrollIntoView({ behavior: 'smooth', block: 'center' });
-          setTimeout(() => { success.style.display = 'none'; }, 6000);
-        }
-      },
-      onError: function () {
-        alert('Something went wrong sending your request. Please try again or call us at (856) 831-8820.');
-      }
-    });
+    formspree('initForm', { formElement: '#quoteForm', formId: 'mpqeejal' });
   </script>
   <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
   <script>

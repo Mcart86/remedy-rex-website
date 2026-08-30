@@ -136,16 +136,9 @@ function closeLightbox() {
 }
 
 // ===== CONTACT FORM =====
-document.getElementById('quoteForm')?.addEventListener('submit', e => {
-  e.preventDefault();
-  const success = document.getElementById('formSuccess');
-  if (success) {
-    success.style.display = 'block';
-    e.target.reset();
-    success.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    setTimeout(() => success.style.display = 'none', 6000);
-  }
-});
+// Success/error handling now lives in contact.html via Formspree's
+// onSuccess/onError callbacks, so it's gated on the actual submission
+// result instead of firing unconditionally on submit.
 
 // ===== SMOOTH HOVER TILT on cards =====
 document.querySelectorAll('.rental-card').forEach(card => {

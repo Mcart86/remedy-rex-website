@@ -42,6 +42,13 @@
     { "source": "/about.html",     "destination": "/about",     "permanent": true },
     { "source": "/inventory.html", "destination": "/inventory", "permanent": true },
     { "source": "/contact.html",   "destination": "/contact",   "permanent": true },
-    { "source": "/blog.html",      "destination": "/blog",      "permanent": true }
+    { "source": "/blog.html",      "destination": "/blog",      "permanent": true },
+
+    { "source": "/product-page/:slug(.*tent.*)", "destination": "/inventory#tents", "permanent": true },
+    { "source": "/product-page/:slug(.*(table|chair|projector|screen).*)", "destination": "/inventory#event-extras", "permanent": true },
+    { "source": "/product-page/:slug(.*(jenga|pong).*)", "destination": "/inventory#life-size-games", "permanent": true },
+    { "source": "/product-page/:path*", "destination": "/inventory", "permanent": true },
+    { "source": "/category/:path*", "destination": "/inventory", "permanent": true },
+    { "source": "/info", "destination": "/about", "permanent": true }
   ]
 }
